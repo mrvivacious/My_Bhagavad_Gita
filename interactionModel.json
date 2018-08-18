@@ -1,0 +1,114 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my bhagavad gita",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel request",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "please help me",
+                        "please help",
+                        "how do i use this",
+                        "what do i do",
+                        "help me",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "initiate end sequence",
+                        "end",
+                        "logout",
+                        "exit",
+                        "quit",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "ChapterIntent",
+                    "slots": [
+                        {
+                            "name": "chapter",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "ask my bhagavad gita for chapter {chapter}",
+                        "open my bhagavad gita and read chapter {chapter}",
+                        "open my bhagavad gita to chapter {chapter}",
+                        "ask my bhagavad gita to open chapter {chapter}",
+                        "ask my bhagavad gita to open to chapter {chapter}",
+                        "ask my bhagavad gita to read chapter {chapter}"
+                    ]
+                },
+                {
+                    "name": "ChapterVerseIntent",
+                    "slots": [
+                        {
+                            "name": "chapter",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "verse",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "ask my bhagavad gita to read verse {verse} in chapter {chapter}",
+                        "ask my bhagavad gita to read verse {verse} from chapter {chapter}",
+                        "ask my bhagavad gita for verse {verse} in chapter {chapter}",
+                        "ask my bhagavad gita to open verse {verse} in chapter {chapter}",
+                        "ask my bhagavad gita to open to chapter {chapter} verse {verse}"
+                    ]
+                },
+                {
+                    "name": "VerseIntent",
+                    "slots": [
+                        {
+                            "name": "verse",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "go to verse {verse}",
+                        "read verse {verse}",
+                        "{verse}",
+                        "verse {verse}"
+                    ]
+                },
+                {
+                    "name": "NextIntent",
+                    "slots": [],
+                    "samples": [
+                        "continue",
+                        "next",
+                        "Yes"
+                    ]
+                },
+                {
+                    "name": "BeginIntent",
+                    "slots": [],
+                    "samples": [
+                        "the beginning",
+                        "beginning",
+                        "start from beginning",
+                        "begin"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
