@@ -1,7 +1,8 @@
 For the verses:
 cat -s bg_edited.txt | grep "\!" -v | grep "," -v | grep "[A-Z]" -v | grep ^"(18" -v  | grep "...(18\...)"$ -B 4 | tr -s "\n"  | less
 
-For the translations
+For the translations:
+
 
 SRIMAD BHAGAVAD-GITA
 
