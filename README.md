@@ -83,5 +83,7 @@ o Bixby version!
 
 ### Done:
 √ Create a base Alexa voice interaction model
+
 √ Get copyright-free audio and text 
+
 √ Declare the dictionaries (fullGita.js) for the verses with the correct verse lengths for each chapter
