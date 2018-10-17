@@ -24,7 +24,8 @@ o Clean up the text into individual verses, saving them in the respective fullGi
   <li>Chapter 18</li>
 </ul>
 
-o Cut the audio files into individual verses, Sanskrit only 
+o Cut the audio files into individual verses, Sanskrit plus English translations
+
 <ul>
   Chapters remaining: 
   <li>Chapter 1</li>
@@ -47,7 +48,8 @@ o Cut the audio files into individual verses, Sanskrit only
   <li>Chapter 18</li>
 </ul>
 
-o Cut the audio files into individual verses, Sanskrit plus English translations
+o Cut the audio files into individual verses, Sanskrit only 
+
 <ul>
   Chapters remaining: 
   <li>Chapter 1</li>
