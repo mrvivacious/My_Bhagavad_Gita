@@ -1,5 +1,25 @@
 # MyBhagavadGitaSkill
-Krsna, heard through the medium of Alexa 
+Krsna, heard through the medium of Alexa. Non-commercial and open-source. Please don't spam the S3 urls and boost my AWS bills :(
+
+
+### Audio sources:
+
+https://archive.org/details/2BhagavadGitaChapter02
+
+https://archive.org/details/6BhagavadGitaChapter06
+
+https://archive.org/details/16BhagavadGitaChapter18
+
+
+### Text source:
+
+https://archive.org/stream/TheBhagavadGitaInEnglish/Bhagavad_Gita_UK_djvu.txt
+
+### [archive.org](https://archive.org/about/faqs.php#Rights)
+
+https://archive.org/about/faqs.php#Rights
+
+
 
 ### Todo:
 o Clean up the text into individual verses, saving them in the respective fullGita.js dictionary 
