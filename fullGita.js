@@ -12,8 +12,15 @@
 // }
 //
 // BHAGAVAD_GITA => The Gita
-// BHAGAVAD_GITA["1"] => Chapter 1 of the Gita
-// BHAGAVAD_GITA["1"]["3"] => Verse 3 from chapter 1 of the Gita
+// BHAGAVAD_GITA[1] => Chapter 1 of the Gita
+// BHAGAVAD_GITA[1][3] => Array of verse 3 and the meaning of verse 3 from chapter 1 of the Gita
+// BHAGAVAD_GITA[1][3][0] => Array of verse 3 and the meaning of verse 3 from chapter 1 of the Gita
+
+// BHAGAVAD_GITA[1][3][0] => Verse 3 from chapter 1 of the Gita
+// BHAGAVAD_GITA[1][3][1] => English translation of verse 3 from chapter 1 of the Gita
+
+// It will help to use predefined constants: VERSE = 0, CONSTANT = 1; when collecting the respective items from each verse pair
+
 
 // Use this command in the Chrome console for easier dict creation!
 // var v = <Copy paste the verses from the textfile as a list>
@@ -26,52 +33,52 @@
 
 BHAGAVAD_GITA = {
   "1" : {
-    "1" : "dhrtarastra uvaca\ndharma-ksetre kuru-ksetre samaveta yuyutsavah\nmamakah pandavas caiva kim akurvata sanjaya (1.1)",
-    "2" : "sanjaya uvaca\ndrstva tu pandavanikam vyudham duryodhanas tada\nacaryam upasangamya raja vacanam abravit (1.2)",
-    "3" : "pasyaitam pandu-putranam acarya mahatim camum\nvyudham drupada-putrena tava sisyena dhimata (1.3)",
-    "4" : "atra sura mahesv-asa bhimarjuna-sama yudhi\nyuyudhano viratas ca drupadas ca maha-rathah (1.4)",
-    "5" : "dhrstaketus cekitanah kasirajas ca viryavan\npurujit kuntibhojas ca saibyas ca nara-pungavah (1.5)",
-    "6" : "yudhamanyus ca vikranta uttamaujas ca viryavan\nsaubhadro draupadeyas ca sarva eva maha-rathah (1.6)",
-    "7" : "asmakam tu visista ye tan nibodha dvijottama\nnayaka mama sainyasya samjnartham tan bravimi te (1.7)",
-    "8" : "bhavan bhismas ca karnas ca krpas ca samitim-jayah\nasvatthama vikarnas ca saumadattis tathaiva ca (1.8)",
-    "9" : "anye ca bahavah sura mad-arthe tyakta-jivitah\nnana-sastra-praharanah sarve yuddha-visaradah (1.9)",
-    "10" : "aparyaptam tad asmakam balam bhismabhiraksitam\nparyaptam tv idam etesam balam bhimabhiraksitam (1.10)",
-    "11" : "ayanesu ca sarvesu yatha-bhagam avasthitah\nbhismam evabhiraksantu bhavantah sarva eva hi (1.11)",
-    "12" : "tasya sanjanayan harsam kuru-vrddhah pitamahah\nsimha-nadam vinadyoccaih sankham dadhmau pratapavan (1.12)",
-    "13" : "tatah sankhas ca bheryas ca panavanaka-gomukhah\nsahasaivabhyahanyanta sa sabdas tumulo 'bhavat (1.13)",
-    "14" : "tatah svetair hay air yukta mahati syandane sthitau\nmadhavah pandavas caiva divyau sankhau pradadhmatuh (1.14)",
-    "15" : "pancajanyam hrsikeso devadattam dhananjayah\npaundram dadhmau maha-sankham bhima-karma vrkodarah (1.15)",
-    "16" : "anantavijayam raja kunti-putro yudhisthirah\nnakulah sahadevas ca sughosa-manipuspakau (1.16)",
-    "17" : "kasyas ca paramesv-asah sikhandi ca maha-rathah\ndhrstadyumno viratas ca satyakis caparajitah (1.17)",
-    "18" : "drupado draupadeyas ca sarvasah prthivi-pate\nsaubhadras ca maha-bahuh sankhan dadhmuh prthak prthak (1.18)",
-    "19" : "sa ghoso dhartarastranam hrdayani vyadarayat\nnabhas caprthivim caiva tumulo bh/vyanunadayan (1.19)",
-    "20" : "atha vyavasthitan drstva dhartarastran kapi dvajah\npravrtte sastra-sampate dhanur udyamya pandavah\nhrsikesam tada vakyam idam aha mahi-pate (1.20)",
-    "21" : "arjuna uvaca\nsenayor ubhayor madhye ratham sthapaya me 'cyuta\nyavad etan nirikse 'ham yod dhu-kaman avasthitan\nkair may a saha yoddhavyam asmin rana-samudyame (1.21, 1.22)",
-    "22" : "arjuna uvaca\nsenayor ubhayor madhye ratham sthapaya me 'cyuta\nyavad etan nirikse 'ham yod dhu-kaman avasthitan\nkair may a saha yoddhavyam asmin rana-samudyame (1.21, 1.22)",
-    "23" : "yotsyamanan avekse 'ham ya ete 'tra samagatah\ndhartarastrasya durbuddher yuddhe priya-cikirsavah (1.23)",
-    "24" : "sanjaya uvaca\nevam ukto hrsikeso gudakesena bharata\nsenayor ubhayor madhye sthapayitva rathottamam (1.24)",
-    "25" : "bhisma-drona-pramukhatah sarvesam ca mahi-ksitam\nuvaca partha pasyaitan samavetan kurun iti (1.25)",
-    "26" : "tatrapasyat sthitan parthah pitrn atha pitamahan\nacaryan matulan bhratrn putran pautran sakhims tatha\nsvasuran suhrdas caiva nayor ubhayor api (1.26)",
-    "27" : "tan samiksya sa kaunteyah sarvan bandhun avasthitan\nkrpaya parayavisto visidann idam abravit (1.27)",
-    "28" : "arjuna uvaca\ndrstvemam sva janam krsna yuyutsum samupasthitam\nsidanti mama gatrani mukham ca parisusyati (1.28)",
-    "29" : "vepathus ca sarire me roma harsas ca jayate\ngandivam sramsate hastat tvak caiva paridahyate (1.29)",
-    "30" : "na ca saknomy avasthatum bhramativa ca me manah\nnimittani ca pasyami viparitani kesava (1.30)",
-    "31" : "na ca sreyo 'nupasyami hatva sva-janam ahave\nna kankse vijayam krsna na ca rajyam sukhani ca (1.31)",
-    "32" : "kim no rajyena govinda kim bhogair jivitena va\nyesam arthe kanksitam no rajyam bhogah sukhani ca (1.32)",
-    "33" : "ta ime 'vasthita yuddhe pranams tyaktva dhanani ca\nacaryah pitarah putras tathaiva ca pitamahah (1.33)",
-    "34" : "matulah svasurah pautrah syalah sambandhinas tatha\netan na hantum icchami ghnato 'pi madhusudana (1.34)",
-    "35" : "api trailokya-rajyasya hetoh kim nu mahi-krte\nnihatya dhartarastran nah ka pritih syaj janardana (1.35)",
-    "36" : "papam evasrayed asman hatvaitan atatayinah\ntasman narha vayam hantum dhartarastran sa bandhavan\nsva janam hi katham hatva sukhinah syama madhava (1.36)",
-    "37" : "yady apy ete na pasyanti lobhopahata-cetasah\nkula-ksaya-krtam dosam mitra-drohe ca patakam (1.37)",
-    "38" : "katham na jneyam asmabhih papad asman nivartitum\nkula ksaya krtam dosam prapasyadbhir janardana (1.38)",
-    "39" : "kula-ksaye pranasyanti kula-dharmah sanatanah\ndharme naste kulam krtsnam adharmo 'bhibhavaty uta (1.39)",
-    "40" : "adharmabhibhavat krsna pradusyanti kula striyah\nsttisu dustasu varsneya jayate varna-sankarah (1.40)",
-    "41" : "sankaro narakayaiva kula-ghnanam kulasya ca\npatanti pitaro hy esam lupta-pindodaka-kriyah (1.41)",
-    "42" : "dosair etaih kula-ghnanam varna-sankara-karakaih\nutsadyante jati-dharmah kula-dharmas ca sasvatah (1.42)",
-    "43" : "utsanna-kula-dharmanam manusyanam janardana\nnarake niyatam vaso bhavatity anususruma (1.43)",
-    "44" : "aho bata mahat papam kartum vyavasita vayam\nyad rajya-sukha-lobhena hantum sva-janam udyatah (1.44)",
-    "45" : "yadi mam apratikaram asastram sastra-panayah\ndhartarastra rane hanyus tan me ksemataram bhavet (1.45)",
-    "46" : "sanjaya uvaca\nevam uktvarjunah sankhye rathopastha upavisat\nvisrjya sa-saram capam soka-samvigna-manasah (1.46)"
+    "1" : ["dhrtarastra uvaca\ndharma-ksetre kuru-ksetre samaveta yuyutsavah\nmamakah pandavas caiva kim akurvata sanjaya (1.1)","Dhrtarastra said:\nO Sanjaya, what did the sons of Pandu and mine do when they gathered on\nthe sacred plain of Kuruksetra, eager for battle?"],
+    "2" : ["sanjaya uvaca\ndrstva tu pandavanikam vyudham duryodhanas tada\nacaryam upasangamya raja vacanam abravit (1.2)", "Sanjaya said: Having seen the army of the Pandavas ranged for battle,\nPrince Duryodhana went up to his acarya (teacher), Drona, and said:"],
+    "3" : ["pasyaitam pandu-putranam acarya mahatim camum\nvyudham drupada-putrena tava sisyena dhimata (1.3)", "Look, O Teacher, at this mighty army of the sons of Pandu, which has been\npositioned by your talented pupil, the son of Drupada."],
+    "4" : ["atra sura mahesv-asa bhimarjuna-sama yudhi\nyuyudhano viratas ca drupadas ca maha-rathah (1.4)", "There are in it heroes, mighty archers, equal in battle to Bhima and\nArjuna: Yuyudhana, Virata, and the great warrior (mahdratha) Drupada,"],
+    "5" : ["dhrstaketus cekitanah kasirajas ca viryavan\npurujit kuntibhojas ca saibyas ca nara-pungavah (1.5)", ""],
+    "6" : ["yudhamanyus ca vikranta uttamaujas ca viryavan\nsaubhadro draupadeyas ca sarva eva maha-rathah (1.6)", ""],
+    "7" : ["asmakam tu visista ye tan nibodha dvijottama\nnayaka mama sainyasya samjnartham tan bravimi te (1.7)", ""],
+    "8" : ["bhavan bhismas ca karnas ca krpas ca samitim-jayah\nasvatthama vikarnas ca saumadattis tathaiva ca (1.8)", ""],
+    "9" : ["anye ca bahavah sura mad-arthe tyakta-jivitah\nnana-sastra-praharanah sarve yuddha-visaradah (1.9)", ""],
+    "10" : ["aparyaptam tad asmakam balam bhismabhiraksitam\nparyaptam tv idam etesam balam bhimabhiraksitam (1.10)", ""],
+    "11" : ["ayanesu ca sarvesu yatha-bhagam avasthitah\nbhismam evabhiraksantu bhavantah sarva eva hi (1.11)", ""],
+    "12" : ["tasya sanjanayan harsam kuru-vrddhah pitamahah\nsimha-nadam vinadyoccaih sankham dadhmau pratapavan (1.12)", ""],
+    "13" : ["tatah sankhas ca bheryas ca panavanaka-gomukhah\nsahasaivabhyahanyanta sa sabdas tumulo \'bhavat (1.13)", ""],
+    "14" : ["tatah svetair hay air yukta mahati syandane sthitau\nmadhavah pandavas caiva divyau sankhau pradadhmatuh (1.14)", ""],
+    "15" : ["pancajanyam hrsikeso devadattam dhananjayah\npaundram dadhmau maha-sankham bhima-karma vrkodarah (1.15)", ""],
+    "16" : ["anantavijayam raja kunti-putro yudhisthirah\nnakulah sahadevas ca sughosa-manipuspakau (1.16)", ""],
+    "17" : ["kasyas ca paramesv-asah sikhandi ca maha-rathah\ndhrstadyumno viratas ca satyakis caparajitah (1.17)", ""],
+    "18" : ["drupado draupadeyas ca sarvasah prthivi-pate\nsaubhadras ca maha-bahuh sankhan dadhmuh prthak prthak (1.18)", ""],
+    "19" : ["sa ghoso dhartarastranam hrdayani vyadarayat\nnabhas caprthivim caiva tumulo bh/vyanunadayan (1.19)",""],
+    "20" : ["atha vyavasthitan drstva dhartarastran kapi dvajah\npravrtte sastra-sampate dhanur udyamya pandavah\nhrsikesam tada vakyam idam aha mahi-pate (1.20)",""],
+    "21" : ["arjuna uvaca\nsenayor ubhayor madhye ratham sthapaya me \'cyuta\nyavad etan nirikse \'ham yod dhu-kaman avasthitan\nkair may a saha yoddhavyam asmin rana-samudyame (1.21, 1.22)",""],
+    "22" : ["arjuna uvaca\nsenayor ubhayor madhye ratham sthapaya me \'cyuta\nyavad etan nirikse \'ham yod dhu-kaman avasthitan\nkair may a saha yoddhavyam asmin rana-samudyame (1.21, 1.22)",""],
+    "22" : ["yotsyamanan avekse \'ham ya ete \'tra samagatah\ndhartarastrasya durbuddher yuddhe priya-cikirsavah (1.23)",""],
+    "23" : ["sanjaya uvaca\nevam ukto hrsikeso gudakesena bharata\nsenayor ubhayor madhye sthapayitva rathottamam (1.24)",""],
+    "24" : ["bhisma-drona-pramukhatah sarvesam ca mahi-ksitam\nuvaca partha pasyaitan samavetan kurun iti (1.25)",""],
+    "25" : ["tatrapasyat sthitan parthah pitrn atha pitamahan\nacaryan matulan bhratrn putran pautran sakhims tatha\nsvasuran suhrdas caiva nayor ubhayor api (1.26)",""],
+    "26" : ["tan samiksya sa kaunteyah sarvan bandhun avasthitan\nkrpaya parayavisto visidann idam abravit (1.27)",""],
+    "27" : ["arjuna uvaca\ndrstvemam sva janam krsna yuyutsum samupasthitam\nsidanti mama gatrani mukham ca parisusyati (1.28)",""],
+    "28" : ["vepathus ca sarire me roma harsas ca jayate\ngandivam sramsate hastat tvak caiva paridahyate (1.29)",""],
+    "29" : ["na ca saknomy avasthatum bhramativa ca me manah\nnimittani ca pasyami viparitani kesava (1.30)",""],
+    "30" : ["na ca sreyo \'nupasyami hatva sva-janam ahave\nna kankse vijayam krsna na ca rajyam sukhani ca (1.31)",""],
+    "31" : ["kim no rajyena govinda kim bhogair jivitena va\nyesam arthe kanksitam no rajyam bhogah sukhani ca (1.32)",""],
+    "32" : ["ta ime \'vasthita yuddhe pranams tyaktva dhanani ca\nacaryah pitarah putras tathaiva ca pitamahah (1.33)",""],
+    "33" : ["matulah svasurah pautrah syalah sambandhinas tatha\netan na hantum icchami ghnato \'pi madhusudana (1.34)",""],
+    "34" : ["api trailokya-rajyasya hetoh kim nu mahi-krte\nnihatya dhartarastran nah ka pritih syaj janardana (1.35)",""],
+    "35" : ["papam evasrayed asman hatvaitan atatayinah\ntasman narha vayam hantum dhartarastran sa bandhavan\nsva janam hi katham hatva sukhinah syama madhava (1.36)",""],
+    "36" : ["yady apy ete na pasyanti lobhopahata-cetasah\nkula-ksaya-krtam dosam mitra-drohe ca patakam (1.37)",""],
+    "37" : ["katham na jneyam asmabhih papad asman nivartitum\nkula ksaya krtam dosam prapasyadbhir janardana (1.38)",""],
+    "38" : ["kula-ksaye pranasyanti kula-dharmah sanatanah\ndharme naste kulam krtsnam adharmo \'bhibhavaty uta (1.39)",""],
+    "39" : ["adharmabhibhavat krsna pradusyanti kula striyah\nsttisu dustasu varsneya jayate varna-sankarah (1.40)",""],
+    "40" : ["sankaro narakayaiva kula-ghnanam kulasya ca\npatanti pitaro hy esam lupta-pindodaka-kriyah (1.41)",""],
+    "41" : ["dosair etaih kula-ghnanam varna-sankara-karakaih\nutsadyante jati-dharmah kula-dharmas ca sasvatah (1.42)",""],
+    "42" : ["utsanna-kula-dharmanam manusyanam janardana\nnarake niyatam vaso bhavatity anususruma (1.43)",""],
+    "43" : ["aho bata mahat papam kartum vyavasita vayam\nyad rajya-sukha-lobhena hantum sva-janam udyatah (1.44)",""],
+    "44" : ["yadi mam apratikaram asastram sastra-panayah\ndhartarastra rane hanyus tan me ksemataram bhavet (1.45)",""],
+    "45" : ["sanjaya uvaca\nevam uktvarjunah sankhye rathopastha upavisat\nvisrjya sa-saram capam soka-samvigna-manasah (1.46)",""]
   },
   "2" : {
     "1" : "",
