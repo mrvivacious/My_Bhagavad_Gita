@@ -22,6 +22,9 @@ https://archive.org/about/faqs.php#Rights
 
 
 ### Todo:
+
+#### Text
+
 o Clean up the text into individual verses, saving them in the respective fullGita.js dictionary 
 <ul>
   Chapters remaining: 
@@ -43,6 +46,8 @@ o Clean up the text into individual verses, saving them in the respective fullGi
   <li>Chapter 17</li>
   <li>Chapter 18</li>
 </ul>
+
+#### Audio
 
 o Cut the audio files into individual verses, Sanskrit plus English translations
 
@@ -92,6 +97,8 @@ o Cut the audio files into individual verses, Sanskrit only
   <li>Chapter 18</li>
 </ul>
 
+#### Post-processing
+
 o Upload all the audio to S3 and connect the storage to our Lambda backend
 
 o Test test test test test
@@ -100,7 +107,7 @@ o Publish!
 
 o Google Assistant version (look into using GCloud Storage over S3 for the Assistant version)!
 
-o Bixby version!
+o Bixby/Cortana/Siri/other voice versions etc
 
 
 ### Done:
