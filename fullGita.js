@@ -1,36 +1,32 @@
+// My Bhagavad Gita
 // fullGita.js
 // This file holds the entire dictionary representation of the Bhagavad Gita
-// @author Hindu YUVA UIUC:
 // @author Vivek Bhookya
 // @author
 //
-// Format: A dictionary of dictionaries
+// –––
+//
+// Format: A dictionary of dictionaries of lists
 // BHAGAVAD_GITA = {
 //   "1" : {"1" : "blah blah", "2" : "blah blah", "3" : "blah blah", "4" : "blah blah"},
 //   "2" : {},
 //   "3" : {}
 // }
 //
+// The format of the following structure is as follows:
+// BHAGAVAD_GITA[CHAPTER NUMBER][VERSE PAIR][VERSE OR TRANSLATION OF VERSE]
+//
+// How we retreieve information depends on how we format our query:
 // BHAGAVAD_GITA => The Gita
 // BHAGAVAD_GITA[1] => Chapter 1 of the Gita
-// BHAGAVAD_GITA[1][3] => Array of verse 3 and the meaning of verse 3 from chapter 1 of the Gita
-// BHAGAVAD_GITA[1][3][0] => Array of verse 3 and the meaning of verse 3 from chapter 1 of the Gita
+// BHAGAVAD_GITA[1][3] => Array of verse 3 and the meaning of verse 3 (the verse pair) from chapter 1 of the Gita
 
 // BHAGAVAD_GITA[1][3][0] => Verse 3 from chapter 1 of the Gita
 // BHAGAVAD_GITA[1][3][1] => English translation of verse 3 from chapter 1 of the Gita
 
 // It will help to use predefined constants: VERSE = 0, CONSTANT = 1; when collecting the respective items from each verse pair
 
-
-// Use this command in the Chrome console for easier dict creation!
-// var v = <Copy paste the verses from the textfile as a list>
-// str = ""
-// for (let i = 1; i <= v.length; i++) {
-//  var s = "\t\t\"" + i + "\" : " + JSON.stringify(v[i-1]) +  ",\n";
-//  str += s;
-// }
-// console.log(str)
-
+// Presenting the Bhagavad Gita in JavaScript glory
 BHAGAVAD_GITA = {
   "1" : {
     "1" : ["dhrtarastra uvaca\ndharma-ksetre kuru-ksetre samaveta yuyutsavah\nmamakah pandavas caiva kim akurvata sanjaya (1.1)","Dhrtarastra said:\nO Sanjaya, what did the sons of Pandu and mine do when they gathered on\nthe sacred plain of Kuruksetra, eager for battle?"],
