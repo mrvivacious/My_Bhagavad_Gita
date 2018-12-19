@@ -42,7 +42,6 @@ o Clean up the text into individual verses, saving them in the respective fullGi
   <li>Chapter 14</li>
   <li>Chapter 15</li>
   <li>Chapter 16</li>
-  <li>Chapter 17</li>
   <li>Chapter 18</li>
 </ul>
 
