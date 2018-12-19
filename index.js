@@ -1,12 +1,12 @@
-/* eslint-disable  func-names */
-/* eslint quote-props: ["error", "consistent"]*/
-/**
- * This sample demonstrates a simple skill built with the Amazon Alexa Skills
- * nodejs skill development kit.
- * This sample supports multiple lauguages. (en-US, en-GB, de-DE).
- * The Intent Schema, Custom Slots and Sample Utterances for this skill, as well
- * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
- **/
+// My Bhagavad Gita
+// index.js
+//
+// This file holds the request-processing-and-fulfillment logic during execution
+//  of the skill
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
 
 'use strict';
 const Alexa = require('alexa-sdk');

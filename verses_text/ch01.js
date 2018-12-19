@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch01.js
+//
+// This file holds the verses and translations of chapter one from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "1" : {
   "1" : ["dhrtarastra uvaca\ndharma-ksetre kuru-ksetre samaveta yuyutsavah\nmamakah pandavas caiva kim akurvata sanjaya (1.1)","Dhrtarastra said:\nO Sanjaya, what did the sons of Pandu and mine do when they gathered on\nthe sacred plain of Kuruksetra, eager for battle?"],
   "2" : ["sanjaya uvaca\ndrstva tu pandavanikam vyudham duryodhanas tada\nacaryam upasangamya raja vacanam abravit (1.2)", "Sanjaya said: Having seen the army of the Pandavas ranged for battle,\nPrince Duryodhana went up to his acarya (teacher), Drona, and said:"],

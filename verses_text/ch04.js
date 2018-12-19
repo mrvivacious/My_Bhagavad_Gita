@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch04.js
+//
+// This file holds the verses and translations of chapter four from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "4" : {
   "1" : ["sri-bhagavan uvaca\nimam vivasvate yogam proktavan aham avyayam\nvivasvan manave praha manur iksvakave 'bravit (4.01)", "The Supreme Lord said: I taught this changeless way of Yoga to Vivasvan;\nVivasvan told it to Manu and Manu to Iksvaku."],
   "2" : ["evam parampara-praptam imam rajarsayo viduh\nsa kaleneha mahata yogo nastah Parantapa (4.02)", "So, was the oral tradition from one to another handed on to the Royal Sages\nwho came to know it, O Parantapa (O vanquisher offoes/Arjuna); but, after\na considerable time, this teaching of Yoga ceased to be in the world."],

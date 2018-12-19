@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch05.js
+//
+// This file holds the verses and translations of chapter five from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "5" : {
   "1" : ["arjuna uvaca\nsannyasam karmanam Krsna punar yogam ca samsasi\nyac chreya etayor ekam tan me bruhi su-niscitam (5.01)", "Arjuna said: You now praise renunciation of actions, O Krsna, and again\nYoga. Tell me decisively which of the two is better."],
   "2" : ["sri-bhagavan uvaca\nsannyasah karma-yogas ca nihsreyasa-karav ubhau\ntayos tu karma-sannyasat karma-yogo visisyate (5.02)", "The Supreme Lord said: Renunciation of actions and Yoga (selfless action),\nboth lead to the highest bliss; but of the two, Yoga of action is superior to\nrenunciation of action."],

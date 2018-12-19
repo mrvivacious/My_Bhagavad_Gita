@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch17.js
+//
+// This file holds the verses and translations of chapter seventeen from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "17" : {
   "1" : ["arjuna uvaca\nye sastra-vidhim utsrjya yajante sraddhayanvitah\ntesam nistha tu ka Krsna sattvam aho rajas tamah (17.01)", "Arjuna said: Those who forsake the ordinances of the Sastras (scriptures),\nand offer sacrifices full of faith (Sraddha), where do they stand, O Krsna? Is\nit one of goodness (Sattva, Sdttvika), passion (Rajas, Rdjasika), ignorance\n(Tamas, Tdmasika, darkness)? (The three qualities or attributes, Sattva,\nRajas, Tamas are used here in their moral correspondences.)"],
   "2" : ["sri-bhagavan uvaca\ntri-vidha bhavati Sraddha dehinam sa svabhava-ja\nsattviki rajasi caiva tamasi ceti tarn srnu (17.02)", "The Supreme Lord said: Threefold is the faith (Sraddha) of embodied souls,\nalong one's own inner character, either of goodness (Sdttvic), of passion\n(Rdjasic), and of ignorance (Tdmasic). Hear now to this."],

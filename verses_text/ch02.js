@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch02.js
+//
+// This file holds the verses and translations of chapter two from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "2" : {
   "1" : ["sanjaya uvaca\ntarn tatha krpayavistam asru-purnakuleksanam\nvisidantam idam vakyam uvaca madhusudanah (2.1)", "Sanjaya said: To him who was in this way overwhelmed with compassion\nand affliction, whose eyes were distraught and filled with tears,\nMadhava (Krsna, the destroyer of Madhu), spoke these words: "],
   "2" : ["sri-bhagavan uvaca\nkutas tva kasmalam idam visame samupasthitam\nanarya-justam asvargyam akirti-karam Arjuna (2.2)", "The Supreme Lord said: From where has this dejection come into your mind in this perilous hour?\nThis is unknown to an Aryan, not leading to heaven but causing disgrace, O Arjuna."],

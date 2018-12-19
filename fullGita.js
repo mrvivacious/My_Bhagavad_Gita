@@ -1,9 +1,11 @@
 // My Bhagavad Gita
 // fullGita.js
-// This file holds the entire dictionary representation of the Bhagavad Gita
+//
+// This file holds the entire [dictionary representation of the] Bhagavad Gita
+//
 // @author Vivek Bhookya
 // @author
-//
+// If you edit this file, add yourself as an author!
 // –––
 //
 // Format: A dictionary of dictionaries of lists

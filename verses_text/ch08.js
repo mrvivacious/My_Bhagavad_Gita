@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch08.js
+//
+// This file holds the verses and translations of chapter eight from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "8" : {
   "1" : ["", ""],
   "2" : ["", ""],

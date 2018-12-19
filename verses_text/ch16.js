@@ -1,3 +1,12 @@
+// My Bhagavad Gita
+// ch16.js
+//
+// This file holds the verses and translations of chapter sixteen from the Bhagavad Gita
+//
+// @author Vivek Bhookya
+// @author
+// If you edit this file, add yourself as an author!
+
 "16" : {
   "1" : ["sri-bhagavan uvaca\nabhayam sattva-samsuddhir jnana-yoga-vyavasthitih\ndanam damas ca yajnas ca svadhyayas tapa arjavam (16.01)", "The Supreme Lord said: Fearlessness and purity of heart, steadfastness in\nthe yoga of knowledge, open-handed and sense-restraint, performing of\nsacrifice (Yajna), intent on the study of scriptures, austerity and integrity."],
   "2" : ["ahimsa satyam akrodhas tyagah santir apaisunam\ndaya bhutesv aloluptvam mardavam hrir acapalam (16.02)", "Non-violence, truthfulness, absence of anger, renunciation, peacefulness,\naverse to calumny, compassion to living beings, freedom from greed,\nmildness, modesty, absence of fickleness."],
