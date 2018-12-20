@@ -29,9 +29,6 @@ o Clean up the text into individual verses, saving them in the respective fullGi
 <ul>
   Chapters remaining: 
   <li>Chapter 6</li>
-  <li>Chapter 7</li>
-  <li>Chapter 8</li>
-  <li>Chapter 9</li>
   <li>Chapter 10</li>
   <li>Chapter 11</li>
   <li>Chapter 12</li>
