@@ -4,7 +4,8 @@
 // This file holds the verses and translations of chapter eight from the Bhagavad Gita
 //
 // @author Vivek Bhookya
-// @author Vivek
+// @author Vivek Mallampati
+// @author
 // If you edit this file, add yourself as an author!
 
 "8" : {
@@ -26,7 +27,7 @@
   "16" : ["a-brahma-bhuvanal lokah punar avartino \'rjuna\nmam upetya tu Kaunteya punar janma na vidyate (8.16)", "The worlds (spheres), beginning with the world (sphere) of Brahman,\ndissolve and evolve, but he who comes to Me, O son of Kunti (Arjuna), there\nis no rebirth."],
   "17" : ["sahasra-yuga-paryantam ahar yad brahmano viduh\nratrim yuga-sahasrantam te \'ho-ratra-vido janah (8.17)", "Those who know that a thousand yugas (ages) lasts one day of Brahma (the\nCreator), and for a thousand yugas (ages) one such night. This knowing,\nthey know day and night."],
   "18" : ["avyaktad vyaktayah sarvah prabhavanty ahar-agame\nratry-agame praliyante tatraivavyakta-samjnake (8.18)", "From the Unmanifested all things manifest proceed at the coming of the\nday; and then at the coming of the night they merge again, even in \"That\"called the Unmanifested."],
-  "19" : ["bhuta-gramah sa evayam bhutva bhutva praliyate\nratry-agame \'vasah Partha prabhavaty ahar-agame (8.19)", "This whole host of beings, coming into being repeatedly, is helplessly\ndissolved at the coming of the night, O Partha {Arjuna), and at dawn of day,\nit rises up again."],
+  "19" : ["bhuta-gramah sa evayam bhutva bhutva praliyate\nratry-agame \'vasah Partha prabhavaty ahar-agame (8.19)", "This whole host of beings, coming into being repeatedly, is helplessly\ndissolved at the coming of the night, O Partha (Arjuna), and at dawn of day,\nit rises up again."],
   "20" : ["paras tasmat tu bhavo \'nyo \'vyakto \'vyaktat sanatanah\nyah sa sarvesu bhutesu nasyatsu na vinasyati (8.20)", "However, beyond this unmanifested there is yet another which is\nUnmanifested and Eternal, which does not perish when all contingent\nbeings perish."],
   "21" : ["avyakto \'ksara ity uktas tarn ahuh paramam gatim\nyam prapya na nivartante tad dhama paramam mama (8.21)", "That Unmanifested, said to be \"the Indestructible\", \"That\" (tad), they say is\nthe supreme goal (refuge). They who reach it return not. That is My\nsupreme abode."],
   "22" : ["purusah sa parah Partha bhaktya labhyas tv ananyaya\nyasyantah-sthani bhutani yena sarvam idam tatam (8.22)", "That Supreme Purusha (highest Spirit), O Partha (Arjuna), within Whom all\ncreation dwell, and by Whom all this universe was spun (pervaded), is\nattainable by love and worship (bhakti), and nothing else."],

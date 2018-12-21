@@ -4,7 +4,8 @@
 // This file holds the verses and translations of chapter seven from the Bhagavad Gita
 //
 // @author Vivek Bhookya
-// @author Vivek
+// @author Vivek Mallampati
+// @author
 // If you edit this file, add yourself as an author!
 
 "7" : {
@@ -14,7 +15,7 @@
   "4" : ["bhumir apo \'nalo vayuh kham mano buddhir eva ca\nahankara itiyam me bhinna prakrtir astadha (7.04)", "Earth, water, fire, air, ether, mind, intellect (Buddhi) and ego (Ahamkara,\nsense of self), these are the eightfold divisions of My nature (Prakriti)."],
   "5" : ["apareyam itas tv anyam prakrtim viddhi me param\njiva-bhutam maha-baho yayedam dharyate jagat (7.05)", "This is the lower (Prakriti)( Apard-sakti), but know My other nature the\nhigher (Prakriti) (Para-sakti), the life-element, O mighty-armed (Arjuna), by\nwhich this universe (jagat) is kept maintained."],
   "6" : ["etad-yonini bhutani sarvanity upadharaya\naham krtsnas ya jagatah prabhavah pralayas tatha (7.06)", "Know that from these (two Natures) all beings take their birth. Therefore, I\nam the origin of the whole universe and also its end."],
-  "7" : ["mattah parataram nanyat kincid asti dhananjaya\nmayi sarvam idam protam sutre mani-gana iva (7.07)", "There is nothing whatsoever higher than I, O Dhananjaya {Arjuna), in Me\nthe universe (sarvan) is strung, like clustered pearls upon a thread."],
+  "7" : ["mattah parataram nanyat kincid asti dhananjaya\nmayi sarvam idam protam sutre mani-gana iva (7.07)", "There is nothing whatsoever higher than I, O Dhananjaya (Arjuna), in Me\nthe universe (sarvan) is strung, like clustered pearls upon a thread."],
   "8" : ["raso \'ham apsu Kaunteya prabhasmi sasi-suryayoh\npranavah sarva-vedesu sabdah khe paurusam nrsu (7.08)", "I am the flavour in water, O son of Kunti (Arjuna), I am the radiance in\nmoon and sun; in all the Vedas the OM syllable, sound in ether, and\nmanhood in all men."],
   "9" : ["punyo gandhah prthivyam ca tejas casmi vibhavasau\njivanam sarva-bhutesu tapas casmi tapasvisu (7.09)", "I am the pure fragrance in the earth, the flame\'s onset in fire; I am the life\nin all beings, and I am the fierce austerity in ascetics."],
   "10" : ["bijam mam sarva-bhutanam viddhi partha sanatanam\nbuddhir buddhimatam asmi tejas tejasvinam aham (7.10)", "O Partha (Arjuna), know Me as the eternal seed of all beings. I am the\nintelligence of the intelligent, and the glory of the glorious."],
@@ -34,8 +35,8 @@
   "24" : ["avyaktam vyaktim apannam manyante mam abuddhayah\nparam bhavam ajananto mamavyayam anuttamam (7.24)", "The foolish ones think I am the Unmanifested, as having manifestation,\nknowing not My supreme nature, immutable and superior."],
   "25" : ["naham prakasah sarvasya yoga-maya-samavrtah\nmudho \'yam nabhijanati loko mam ajam avyayam (7.25)", "I am not revealed to all, because concealed (as I am) by Yoga-Maya (the\ncreative power of yoga, all things being the thought-forms of the One). This\ndeceived world knows Me not, the Unborn and Changeless."],
   "26" : ["vedaham samatitani vartamanani carjuna\nbhavisyani ca bhutani mam tu veda na kascana (7.26)", "I know, O Arjuna, all beings past, present and yet to come, but no one\nknows Me."],
-  "27" : ["iccha-dvesa-samutthena dvandva-mohena bharata\nsarva-bhutani sammoham sarge yanti parantapa (7.27)", "Due to the delusion of the pairs of opposites {or, the dualities, dvandva),\narising from like and dislike {attraction and repulsion), O Bharata {Arjuna),\nall contingent beings are subject to illusion at birth, O Parantapa {O harasser of foes, Arjuna)."],
-  "28" : ["yesam tv anta-gatam papam jananam punya-karmanam\nte dvandva-moha-nirmukta bhajante mam drdha-vratah (7.28)", "But those men of pure deeds whose sins have come to an end, released from\nthe delusive pairs of opposites {the dualities), steadfast in their vows, they\nworship Me."],
+  "27" : ["iccha-dvesa-samutthena dvandva-mohena bharata\nsarva-bhutani sammoham sarge yanti parantapa (7.27)", "Due to the delusion of the pairs of opposites (or, the dualities, dvandva),\narising from like and dislike (attraction and repulsion), O Bharata (Arjuna),\nall contingent beings are subject to illusion at birth, O Parantapa (O harasser of foes, Arjuna)."],
+  "28" : ["yesam tv anta-gatam papam jananam punya-karmanam\nte dvandva-moha-nirmukta bhajante mam drdha-vratah (7.28)", "But those men of pure deeds whose sins have come to an end, released from\nthe delusive pairs of opposites (the dualities), steadfast in their vows, they\nworship Me."],
   "29" : ["jara-marana-moksaya mam asritya yatanti ye\nte brahma tad viduh krtsnam adhyatmam karma cakhilam (7.29)", "They who, putting their trust in Me, striving for liberation (Moksa) from\ndecay and death, they realise in full the Brahman, the Self and all action(karma)."],
   "30" : ["sadhibhutadhidaivam mam sadhiyajnam ca ye viduh\nprayana-kale \'pi ca mam te vidur yukta-cetasah (7.30)", "Those who realise Me in Adhibhuta (physical region), in the Adhidaiva (the\nspiritual or divine region), and in that of Adhiyajna (region of sacrifice),\nsteadfastly realise Me, even at the time of death."]
 }
