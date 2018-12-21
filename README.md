@@ -25,10 +25,9 @@ https://archive.org/about/faqs.php#Rights
 
 #### Text
 
-o Clean up the text into individual verses, saving them in the respective fullGita.js dictionary 
+o Clean up the text into individual verses, saving them in the respective fullGita.js dictionary
 <ul>
-  Chapters remaining: 
-  <li>Chapter 6</li>
+  Chapters remaining:
   <li>Chapter 10</li>
   <li>Chapter 11</li>
   <li>Chapter 12</li>
@@ -43,7 +42,7 @@ o Clean up the text into individual verses, saving them in the respective fullGi
 o Cut the audio files into individual verses, Sanskrit plus English translations
 
 <ul>
-  Chapters remaining: 
+  Chapters remaining:
   <li>Chapter 1</li>
   <li>Chapter 2</li>
   <li>Chapter 3</li>
@@ -64,10 +63,10 @@ o Cut the audio files into individual verses, Sanskrit plus English translations
   <li>Chapter 18</li>
 </ul>
 
-o Cut the audio files into individual verses, Sanskrit only 
+o Cut the audio files into individual verses, Sanskrit only
 
 <ul>
-  Chapters remaining: 
+  Chapters remaining:
   <li>Chapter 1</li>
   <li>Chapter 2</li>
   <li>Chapter 3</li>
@@ -104,6 +103,6 @@ o Bixby/Cortana/Siri/other voice versions etc
 ### Done:
 √ Create a base Alexa voice interaction model
 
-√ Get copyright-free audio and text 
+√ Get copyright-free audio and text
 
 √ Declare the dictionaries (fullGita.js) for the verses with the correct verse lengths for each chapter
