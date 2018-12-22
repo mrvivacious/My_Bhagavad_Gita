@@ -65,7 +65,6 @@ o Cut the audio files into individual verses, Sanskrit only
 
 <ul>
   Chapters remaining:
-  <li>Chapter 1</li>
   <li>Chapter 2</li>
   <li>Chapter 3</li>
   <li>Chapter 4</li>
