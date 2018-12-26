@@ -4,11 +4,11 @@
 // This file holds the verses and translations of chapter fifteen from the Bhagavad Gita
 //
 // @author Vivek Bhookya
-// @author
+// @author Hidayat Shah
 // If you edit this file, add yourself as an author!
 
 "15" : {
-  "1" : ["", ""],
+  "1" : ["sri-bhagavan uvaca/nurdhva-mulam adhah-sakham asvattham prahur avyaya/nchandamsi yasya parnani yas tarn veda sa veda-vit (15.1)","]
   "2" : ["", ""],
   "3" : ["", ""],
   "4" : ["", ""],
