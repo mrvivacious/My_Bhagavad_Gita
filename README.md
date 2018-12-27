@@ -28,8 +28,6 @@ https://archive.org/about/faqs.php#Rights
 o Clean up the text into individual verses, saving them in the respective fullGita.js dictionary
 <ul>
   Chapters remaining:
-  <li>Chapter 11</li>
-  <li>Chapter 12</li>
   <li>Chapter 15</li>
   <li>Chapter 18</li>
 </ul>
