@@ -15,7 +15,7 @@
   "5" : ["nirmana-mohajita-sanga-dosa adhyatma-nitya vinivrtta-kamah/ndvandvair vimuktah sukha-duhkha-samjnair gacchanty amudhah padam/navyayam tat (15.5)","Free from pride and ignorance, victorious over the vice of attachment, ever/nabiding in what concerns the Self, desire suppressed, released from the/npairs of opposites (all dualities) made known in pleasure as in pain, they/ntread, undeluded, that Eternal Goal."],  
   "6" : ["na tad bhasayate suryo na sasanko na pavakah/nyad gatva na nivartante tad dhama paramam mama (15.6)","Nor does the sun lights there, nor moon, nor fire. That is My supreme/n  abode (dhama, home) from where, having reached it, no one returns."],
   "7" : ["mamaivamso jiva-loke jiva-bhutah sanatanah/nmanah-sasthanindriyani prakrti sthani karsati (15.7)","A portion (a minute particle, a ray) of Mine own Self, which becomes life in/nthe living world (the living world of Jivas) into an immortal Jiva (Jivatma,/nSoul; a life, individualised from the Supreme (Eternal) Being), drawing to itself/nthe senses, with the mind as the sixth, abiding in Prakriti (matter)."],
-  "8" : ["", ""],
+  "8" : ["sariram yad avapnoti yac capy utkramatisvarah/ngrh itvaitani sam yati vayur gandhan ivasayat (15.8)","When the Lord assumes a body, and when He abandons it, He takes them/n(the senses and the mind), moving on with them, just as the wind wafts away/nthe scents from their sources."],
   "9" : ["", ""],
   "10" : ["", ""],
   "11" : ["", ""],
