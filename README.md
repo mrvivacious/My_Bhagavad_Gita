@@ -29,7 +29,6 @@ o Clean up the text into individual verses, saving them in the respective fullGi
 <ul>
   Chapters remaining:
   <li>Chapter 15</li>
-  <li>Chapter 18</li>
 </ul>
 
 #### Audio
