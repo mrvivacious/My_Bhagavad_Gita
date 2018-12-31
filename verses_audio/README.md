@@ -1,6 +1,5 @@
 ### Where is the audio ??????
-Right -- I gotta find a place to host all the audio (like Google Drive or Dropbox) to facilitate collaborative editing.
-We will figure this out after we finish processing all the text <3
+Google Drive (don't delete stuff for fun 👿): https://drive.google.com/drive/folders/1AQPqvR5BLD7xh-g_s1ea35porzs40e0U?usp=sharing
 
 <hr>
 
