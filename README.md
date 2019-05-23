@@ -45,7 +45,6 @@ o Cut the audio files into individual verses, Sanskrit plus English translations
   <li>Chapter 11</li>
   <li>Chapter 12</li>
   <li>Chapter 13</li>
-  <li>Chapter 14</li>
 </ul>
 
 o Cut the audio files into individual verses, Sanskrit only
@@ -62,7 +61,6 @@ o Cut the audio files into individual verses, Sanskrit only
   <li>Chapter 11</li>
   <li>Chapter 12</li>
   <li>Chapter 13</li>
-  <li>Chapter 14</li>
 </ul>
 
 #### Post-processing
