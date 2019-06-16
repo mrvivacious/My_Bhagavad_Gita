@@ -1,12 +1,31 @@
-// My Bhagavad Gita
+// Bhagavad Gita
+//
 // index.js
+// This file parses the user request and attempts to construct the
+//  appropriate feedback
+// Attempts because bugs in voice development often don't sit in
+//  the code but the user experience
 //
-// This file holds the request-processing-and-fulfillment logic during execution
-//  of the skill
+// @author Vivek Bhookya @mrvivacious
+
+// TODO ::
+
+// Verse (sloka) playback:
+// o Can we play anything back, hello world?
+// o Can we play an audio file in the response, hello world + audio mpeg?
+// o Can we play audio based on inputted chapter and verse?
+
+// Topic playback:
+// o Can we query the user's topic?
+// o Can we play an appropriate verse based on the user's topic?
+
+// Figure out what we can do for these cases, cuz implementing them is gonna
+//  be annoying:
+// o Can we prompt the user for the desired verse, given only the chapter?
+// o Can we prompt the user for the desired chapter, given only the verse?
 //
-// @author Vivek Bhookya
-// @author
-// If you edit this file, add yourself as an author!
+//
+// DONE ::
 
 'use strict';
 const Alexa = require('alexa-sdk');
@@ -23,11 +42,18 @@ const STOP_MESSAGE = 'Goodbye!';
 
 //=========================================================================================================================================
 
+const data = [
+    'hi'
+];
+
+//=========================================================================================================================================
+
 const handlers = {
     'LaunchRequest': function () {
         // hello world
         // Thank you, https://medium.freecodecamp.org/amazon-has-made-it-easier-to-add-sounds-to-custom-alexa-skills-513b865d7528
-        var test = "<audio src='https://s3.amazonaws.com/GET_YOUR_OWN_S3_BUCKET'/>";
+        // var test = "<audio src='https://s3.amazonaws.com/audiomybhagavadgita/01_01_m_mpeg.mp3'/>";
+        var test = "<audio src='https://raw.githubusercontent.com/mrvivacious/My_Bhagavad_Gita/master/verses_audio/01/01_01_m_mpeg.mp3'/>";
         var testText = "Dhrtarastra uvaca\nDharma-ksetre kuru-ksetre samaveta yuyutsavah\nMamakah pandavas caiva kim akurvata sanjaya (1.1)\nDhrtastra said, O Sanjaya, blah blah blah~";
 
         this.response.cardRenderer(SKILL_NAME, testText);
