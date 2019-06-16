@@ -9,23 +9,27 @@
 // @author Vivek Bhookya @mrvivacious
 
 // TODO ::
+// CURRENT :: Revisit the interaction model and figure out a more effective way
+//  of creating the voice user interface, as that design dictates what's
+//  written in this file
 
 // Verse (sloka) playback:
-// o Can we play anything back, hello world?
-// o Can we play an audio file in the response, hello world + audio mpeg?
-// o Can we play audio based on inputted chapter and verse?
+// Can we play audio based on inputted chapter and verse?
 
 // Topic playback:
-// o Can we query the user's topic?
-// o Can we play an appropriate verse based on the user's topic?
+// Can we query the user's topic?
+// Can we play an appropriate verse based on the user's topic?
 
 // Figure out what we can do for these cases, cuz implementing them is gonna
 //  be annoying:
-// o Can we prompt the user for the desired verse, given only the chapter?
-// o Can we prompt the user for the desired chapter, given only the verse?
+// Can we prompt the user for the desired verse, given only the chapter?
+// Can we prompt the user for the desired chapter, given only the verse?
 //
 //
 // DONE ::
+// Can we play anything back, hello world?
+// Can we play an audio file in the response, hello world + audio mpeg?
+
 
 'use strict';
 const Alexa = require('alexa-sdk');
