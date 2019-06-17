@@ -1,3 +1,6 @@
+// My Bhagavad Gita
+// topicsGita.js
+//
 // topicsMap is a map of topics / sentiments to lists of related verses
 // topicsMap[KEYWORD] => list of lists
 // topicsMap[KEYWORD][index] => a specific chapter,verse pair from
@@ -5,8 +8,11 @@
 //
 // topicsMap[KEYWORD][index][0] => Chapter
 // topicsMap[KEYWORD][index][1] => Verse
+//
+// @author Vivek Bhookya @mrvivacious
+// @author Vivek Mallampati
 
-let topicsMap = {
+let TOPICS_MAP = {
   'happy' : [
     [1,36], [5,23], [10,9]
   ],
@@ -34,7 +40,7 @@ let topicsMap = {
   ],
   'dealing with envy' : [
     [12,13], [12,14], [16,19], [18,71]
-  ],  
+  ],
   'death of loved one' : [
     [2,13], [2,20], [2,22], [2,25], [2,27]
   ],
@@ -83,4 +89,6 @@ let topicsMap = {
   'feeling sin' : [
     [4,36], [4,37], [5,10], [9,30], [10,3], [14,6], [18,66]
   ]
-}
+};
+
+exports.TOPICS_MAP = TOPICS_MAP;
