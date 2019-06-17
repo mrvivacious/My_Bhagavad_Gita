@@ -36,73 +36,44 @@
           ]
         },
         {
-          "name": "ChapterIntent",
+          "name": "TopicEnquiryIntent",
           "slots": [{
-            "name": "chapter",
-            "type": "AMAZON.NUMBER"
+            "name": "topic",
+            "type": "topic"
           }],
           "samples": [
-            "ask my bhagavad gita for chapter {chapter}",
-            "open my bhagavad gita and read chapter {chapter}",
-            "open my bhagavad gita to chapter {chapter}",
-            "ask my bhagavad gita to open chapter {chapter}",
-            "ask my bhagavad gita to open to chapter {chapter}",
-            "ask my bhagavad gita to read chapter {chapter}"
-          ]
-        },
-        {
-          "name": "ChapterVerseIntent",
-          "slots": [{
-              "name": "chapter",
-              "type": "AMAZON.NUMBER"
-            },
-            {
-              "name": "verse",
-              "type": "AMAZON.NUMBER"
-            }
-          ],
-          "samples": [
-            "ask my bhagavad gita to read verse {verse} in chapter {chapter}",
-            "ask my bhagavad gita to read verse {verse} from chapter {chapter}",
-            "ask my bhagavad gita for verse {verse} in chapter {chapter}",
-            "ask my bhagavad gita to open verse {verse} in chapter {chapter}",
-            "ask my bhagavad gita to open to chapter {chapter} verse {verse}"
-          ]
-        },
-        {
-          "name": "VerseIntent",
-          "slots": [{
-            "name": "verse",
-            "type": "AMAZON.NUMBER"
-          }],
-          "samples": [
-            "go to verse {verse}",
-            "read verse {verse}",
-            "{verse}",
-            "verse {verse}"
-          ]
-        },
-        {
-          "name": "NextIntent",
-          "slots": [],
-          "samples": [
-            "continue",
-            "next",
-            "Yes"
-          ]
-        },
-        {
-          "name": "BeginIntent",
-          "slots": [],
-          "samples": [
-            "the beginning",
-            "beginning",
-            "start from beginning",
-            "begin"
+            "ask the bhagavad gita to tell me something about {topic}",
+            "ask the bhagavad gita for a verse about {topic}",
+            "ask the bhagavad gita for something on {topic}",
+            "ask the bhagavad gita for a verse on {topic}"
           ]
         }
       ],
-      "types": []
+      "types": [{
+        "name": "topic",
+        "values": [{
+            "name": {
+              "value": "loneliness",
+              "synonyms": [
+                "being lonely"
+              ]
+            }
+          },
+          {
+            "name": {
+              "value": "sadness"
+            }
+          },
+          {
+            "name": {
+              "value": "happy",
+              "synonyms": [
+                "being happy"
+              ]
+            }
+          }
+        ]
+      }]
     }
   }
 }
