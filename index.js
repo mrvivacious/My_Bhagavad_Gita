@@ -47,11 +47,37 @@ const TOPICS_MAP = topicsGitaFile.TOPICS_MAP;
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = process.env.APP_ID;
+const AUDIO_URL = 'https://raw.githubusercontent.com/mrvivacious/My_Bhagavad_Gita/master/verses_audio/';
 
 const SKILL_NAME = 'My Bhagavad Gita';
 const HELP_MESSAGE = 'todo';
 const HELP_REPROMPT = 'todo';
 const STOP_MESSAGE = 'Goodbye!';
+
+//============ HELPER FUNCTIONS ===========================================================================================================
+
+function constructAudioURL(chapter, verse) {
+  // TODO Check if the verse number exists for the given chapter
+  //  in a function call prior to this one
+
+  // Prefix the chapter and verse with '0' if needed
+  if (chapter < 10) {
+    chapter = '0' + chapter;
+  }
+
+  if (verse < 10) {
+    verse = '0' + verse;
+  }
+
+  // Build the path
+  // For example,
+  // 01/01_01_m_mpeg.mp3
+  // let path = `${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
+  let path = '10/With_meaning/mpeg/10_09_m_mpeg.mp3';
+
+  // Return the full URL
+  return AUDIO_URL + path;
+}
 
 //=========================================================================================================================================
 
@@ -59,7 +85,6 @@ const handlers = {
   'LaunchRequest': function() {
     // hello world
     // Thank you, https://medium.freecodecamp.org/amazon-has-made-it-easier-to-add-sounds-to-custom-alexa-skills-513b865d7528
-    // var test = "<audio src='https://raw.githubusercontent.com/mrvivacious/My_Bhagavad_Gita/master/verses_audio/01/01_01_m_mpeg.mp3'/>";
     // var testText = "Dhrtarastra uvaca\nDharma-ksetre kuru-ksetre samaveta yuyutsavah\nMamakah pandavas caiva kim akurvata sanjaya (1.1)\nDhrtastra said, O Sanjaya, blah blah blah~";
 
     let testText = "What's up folks.";
@@ -89,15 +114,21 @@ const handlers = {
     let chapterNumber = randomChapterVerse[0];
     let verseNumber = randomChapterVerse[1];
 
-    // ??? show Sanskrit if desired, ? Gotta figure out how to configure the
-    //  two languages
+    // For display purposes
     let verseSanskrit = BHAGAVAD_GITA[chapterNumber][verseNumber][0];
     let verseEnglish = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
 
     // TODO Construct the output and emit the response
+    let audioURL = constructAudioURL(chapterNumber, verseNumber);
+    var test = `<audio src='${audioURL}'/>`;
+
+    console.log('$$$$$ The constructed audio url is ' + test);
+
+    // TODO Remove "a verse about" part for production, use it in development
+    //  for debugging what topic Alexa picks up from the user
     // Thank you,
     // https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/32202320#32202320
-    let output = `A verse about '${topic}', from chapter ${chapterNumber}, verse ${verseNumber}: ${verseEnglish}`;
+    let output = `A verse about '${topic}', from chapter ${chapterNumber}, verse ${verseNumber}: ` + test;
 
     // TODO Else if topic does not exist,
     // TODO Log the request + topic to Cloudwatch so we can see what the request was
