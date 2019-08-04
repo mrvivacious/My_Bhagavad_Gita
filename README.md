@@ -27,10 +27,6 @@ https://archive.org/about/faqs.php#Rights
 
 o Finish any leftover TODOs for the text (ie trimming any lengthy translations)
 
-#### Audio
-
-o Make MPEG for Without_meaning verses
-
 #### Post-processing
 
 o Upload all the audio to S3 and connect the storage to our Lambda backend
