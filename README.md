@@ -19,8 +19,6 @@ https://archive.org/stream/TheBhagavadGitaInEnglish/Bhagavad_Gita_UK_djvu.txt
 
 https://archive.org/about/faqs.php#Rights
 
-
-
 ### Todo:
 
 #### Text
@@ -31,19 +29,7 @@ o Finish any leftover TODOs for the text (ie trimming any lengthy translations)
 
 #### Audio
 
-o Cut the audio files into individual verses, Sanskrit plus English translations
-
-<ul>
-  Chapters remaining:
-  <li>Chapter 6</li>
-</ul>
-
-o Cut the audio files into individual verses, Sanskrit only
-
-<ul>
-  Chapters remaining:
-  <li>Chapter 6</li>
-</ul>
+o Make MPEG for Without_meaning verses
 
 #### Post-processing
 
