@@ -59,24 +59,25 @@ const STOP_MESSAGE = 'Goodbye!';
 function constructAudioURL(chapter, verse) {
   // TODO Check if the verse number exists for the given chapter
   //  in a function call prior to this one
-
+  
   // Prefix the chapter and verse with '0' if needed
   if (chapter < 10) {
     chapter = '0' + chapter;
   }
-
+  
   if (verse < 10) {
     verse = '0' + verse;
   }
-
+  
   // Build the path
-  // For example,
+  // For example, 
   // 01/01_01_m_mpeg.mp3
   // let path = `${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
   let path = '10/With_meaning/mpeg/10_09_m_mpeg.mp3';
-
+  
   // Return the full URL
-  return AUDIO_URL + path;
+  // return AUDIO_URL + path;
+  return 'chapter is ' + chapter + ' verse is ' + verse;
 }
 
 //=========================================================================================================================================
@@ -96,37 +97,37 @@ const handlers = {
   'TopicEnquiryIntent': function() {
     //   console.log("--- TOPIC MAP FILE ? ---");
     //   console.log(Object.keys(topicsGitaFile['TOPICS_MAP']));
-
+      
     // Get the user's requested topic
     let topic = this.event.request.intent.slots.topic.value.toLowerCase();
-
-    // TODO If the topic has a synonym, get the more general term
+    
+    // TODO If the topic has a synonym, get the more general term 
     // Collect the list of verses that corresponds to this topic
     let topicVerses = TOPICS_MAP[topic];
-
+    
     // console.log("--- OUR VERSES ---");
     // console.log(topicVerses);
-
+    
     // Randomly select a chapter-verse item from the list
     let randomIdx = Math.floor(Math.random() * topicVerses.length);
     let randomChapterVerse = topicVerses[randomIdx];
-
+    
     let chapterNumber = randomChapterVerse[0];
     let verseNumber = randomChapterVerse[1];
-
+    
     // For display purposes
     let verseSanskrit = BHAGAVAD_GITA[chapterNumber][verseNumber][0];
     let verseEnglish = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
-
+    
     // TODO Construct the output and emit the response
     let audioURL = constructAudioURL(chapterNumber, verseNumber);
     var test = `<audio src='${audioURL}'/>`;
 
     console.log('$$$$$ The constructed audio url is ' + test);
-
+    
     // TODO Remove "a verse about" part for production, use it in development
     //  for debugging what topic Alexa picks up from the user
-    // Thank you,
+    // Thank you, 
     // https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/32202320#32202320
     let output = `A verse about '${topic}', from chapter ${chapterNumber}, verse ${verseNumber}: ` + test;
 
@@ -136,7 +137,7 @@ const handlers = {
     // TODO If a verse is found, construct the output and emit the respone
     // TODO If no verse found, state what topics are currently supported and prompt
     //  the user for a new request
-
+    
     this.response.cardRenderer(SKILL_NAME, output);
     this.response.speak(output);
     this.emit(':responseReady');
