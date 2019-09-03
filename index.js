@@ -56,10 +56,24 @@ const STOP_MESSAGE = 'Goodbye!';
 
 //============ HELPER FUNCTIONS ===========================================================================================================
 
-function constructAudioURL(chapter, verse) {
-  // TODO Check if the verse number exists for the given chapter
-  //  in a function call prior to this one
+function validateBounds(chapter, verse) {
+  // Lmao wyd user
+  if (chapter < 1 || chapter > 18) {
+    return false;
+  }
 
+  // Number of verses in the selected chapter
+  let versesInChapter = Object.keys(GITA_MAP[chapter]).length;
+
+  // Is the verse number in this chapter?
+  if (verse > 0 && verse <= versesInChapter) {
+    return true;
+  }
+
+  return false;
+}
+
+function constructAudioURL(chapter, verse) {
   // Prefix the chapter and verse with '0' if needed
   if (chapter < 10) {
     chapter = '0' + chapter;
@@ -77,6 +91,7 @@ function constructAudioURL(chapter, verse) {
 
   // Return the full URL
   return AUDIO_URL + path;
+  // return 'chapter is ' + chapter + ' verse is ' + verse;
 }
 
 //=========================================================================================================================================
@@ -91,6 +106,45 @@ const handlers = {
 
     this.response.cardRenderer(SKILL_NAME, testText);
     this.response.speak(testText);
+    this.emit(':responseReady');
+  },
+  'VerseEnquiryIntent': function () {
+    // Keep these as strings and not parseInt because the GITA_MAP uses "NUMBER"
+    //  for the chapter keys
+    let chapterNumber = this.event.request.intent.slots.chapter.value;
+    let verseNumber = this.event.request.intent.slots.verse.value;
+
+    // Validate chapter and verse are not undefined
+    // The user provided both values
+    if (chapterNumber && verseNumber) {
+      // When both are non-null, ensure the verse is in the bounds of the
+      //  desired chapter
+      if (validateBounds(chapterNumber, verseNumber)) {
+        // If true, we have a valid verse, deliver the audio URL
+        // todo
+      }
+
+    }
+    // No values were provided, "cold launch"
+    // + Prompt for both chapter and verse
+    else {
+      let output = 'What number chapter and what number verse do you want to hear?';
+      let listen = 'Say chapter, followed by the chapter number, and verse,' +
+        ' followed by the verse number';
+
+      this.response.cardRenderer(SKILL_NAME, output);
+      this.response.speak(output).listen(listen);
+      this.emit(':responseReady');
+    }
+
+    let test = 'Validate bounds';
+
+    // Construct the output and return the result
+
+    // testText = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
+
+    this.response.cardRenderer(SKILL_NAME, test);
+    this.response.speak(test);
     this.emit(':responseReady');
   },
   'TopicEnquiryIntent': function() {
@@ -164,3 +218,55 @@ exports.handler = function(event, context, callback) {
   alexa.registerHandlers(handlers);
   alexa.execute();
 };
+
+
+
+ // In the even where users provided one value at a time
+ // Let's just go ALL - or - NOTHING
+ // ONE VALUE //
+    // Verse is defined, chapter == undefined, number == undefined
+    // + Prompt for the missing chapter
+    // If we already have a value saved for this session, don't overwrite
+    // IE. "Verse three" response will set chapterNumber to undefined
+    // if (verseNumber && !chapterNumber && !number) {
+    //   this.attributes["verse"] = verseNumber;
+
+    //   let output = 'What number chapter do you want to hear verse ' + verseNumber + 'from?';
+    //   let listen = 'Say chapter, followed by the chapter number';
+
+    //   this.response.cardRenderer(SKILL_NAME, output);
+    //   this.response.speak(output).listen(listen);
+    //   this.emit(':responseReady');
+    // }
+
+    // Chapter is defined, verse == undefined, number == undefined
+    // if (chapterNumber && !verseNumber && !number) {
+    //   this.attributes["chapter"] = chapterNumber;
+
+    //   let output = 'From chapter ' + chapterNumber + ', what number verse do you want to hear?';
+    //   let listen = 'Say verse, followed by the verse number';
+
+    //   this.response.cardRenderer(SKILL_NAME, output);
+    //   this.response.speak(output).listen(listen);
+    //   this.emit(':responseReady');
+    // }
+
+    // // NUMBER RESPONSE //
+    // // Verse is defined, chapter == undefined, number == defined
+    // // + Set the missing attribute with ${number} and proceed
+    // if (verseNumber && !chapterNumber && number) {
+    //   // VALIDATE BOUNDS
+
+    //   // this.response.cardRenderer(SKILL_NAME, output);
+    //   // this.response.speak(output).listen(listen);
+    //   // this.emit(':responseReady');
+    // }
+
+    // // Chapter is defined, verse == undefined, number == defined
+    // if (chapterNumber && !verseNumber && number) {
+    //   // VALIDATE BOUNDS
+
+    //   // this.response.cardRenderer(SKILL_NAME, output);
+    //   // this.response.speak(output).listen(listen);
+    //   // this.emit(':responseReady');
+    // }
