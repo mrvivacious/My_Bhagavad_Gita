@@ -56,7 +56,6 @@ const STOP_MESSAGE = 'Goodbye!';
 
 //============ HELPER FUNCTIONS ===========================================================================================================
 
-<<<<<<< HEAD
 function validateBounds(chapter, verse) {
   // Lmao wyd user
   if (chapter < 1 || chapter > 18) {
@@ -64,7 +63,7 @@ function validateBounds(chapter, verse) {
   }
 
   // Number of verses in the selected chapter
-  let versesInChapter = Object.keys(GITA_MAP[chapter]).length;
+  let versesInChapter = Object.keys(BHAGAVAD_GITA[chapter]).length;
 
   // Is the verse number in this chapter?
   if (verse > 0 && verse <= versesInChapter) {
@@ -75,35 +74,24 @@ function validateBounds(chapter, verse) {
 }
 
 function constructAudioURL(chapter, verse) {
-=======
-function constructAudioURL(chapter, verse) {
-  // TODO Check if the verse number exists for the given chapter
-  //  in a function call prior to this one
-  
->>>>>>> 3f8b12da8b92b6d46b97c1cbcd8bf5b5eede0b93
   // Prefix the chapter and verse with '0' if needed
   if (chapter < 10) {
     chapter = '0' + chapter;
   }
-  
+
   if (verse < 10) {
     verse = '0' + verse;
   }
-  
+
   // Build the path
-  // For example, 
+  // For example,
   // 01/01_01_m_mpeg.mp3
   // let path = `${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
   let path = '10/With_meaning/mpeg/10_09_m_mpeg.mp3';
-  
+
   // Return the full URL
-<<<<<<< HEAD
-  return AUDIO_URL + path;
-  // return 'chapter is ' + chapter + ' verse is ' + verse;
-=======
   // return AUDIO_URL + path;
   return 'chapter is ' + chapter + ' verse is ' + verse;
->>>>>>> 3f8b12da8b92b6d46b97c1cbcd8bf5b5eede0b93
 }
 
 //=========================================================================================================================================
@@ -135,6 +123,20 @@ const handlers = {
         // If true, we have a valid verse, deliver the audio URL
         // todo
       }
+      // Else, speak that this chapter does not have this verse and
+      //  the chapter instead has some number of verses
+      else {
+        // Number of verses in the selected chapter
+        let versesInChapter = Object.keys(BHAGAVAD_GITA[chapterNumber]).length;
+
+        let output = 'Hmm, chapter ' + chapterNumber + ' does not have a verse ' +
+          verseNumber + '. Chapter ' + chapterNumber + ' has ' + versesInChapter +
+          ' verses.';
+
+          this.response.cardRenderer(SKILL_NAME, output);
+          this.response.speak(output);
+          this.emit(':responseReady');
+      }
 
     }
     // No values were provided, "cold launch"
@@ -162,37 +164,37 @@ const handlers = {
   'TopicEnquiryIntent': function() {
     //   console.log("--- TOPIC MAP FILE ? ---");
     //   console.log(Object.keys(topicsGitaFile['TOPICS_MAP']));
-      
+
     // Get the user's requested topic
     let topic = this.event.request.intent.slots.topic.value.toLowerCase();
-    
-    // TODO If the topic has a synonym, get the more general term 
+
+    // TODO If the topic has a synonym, get the more general term
     // Collect the list of verses that corresponds to this topic
     let topicVerses = TOPICS_MAP[topic];
-    
+
     // console.log("--- OUR VERSES ---");
     // console.log(topicVerses);
-    
+
     // Randomly select a chapter-verse item from the list
     let randomIdx = Math.floor(Math.random() * topicVerses.length);
     let randomChapterVerse = topicVerses[randomIdx];
-    
+
     let chapterNumber = randomChapterVerse[0];
     let verseNumber = randomChapterVerse[1];
-    
+
     // For display purposes
     let verseSanskrit = BHAGAVAD_GITA[chapterNumber][verseNumber][0];
     let verseEnglish = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
-    
+
     // TODO Construct the output and emit the response
     let audioURL = constructAudioURL(chapterNumber, verseNumber);
     var test = `<audio src='${audioURL}'/>`;
 
     console.log('$$$$$ The constructed audio url is ' + test);
-    
+
     // TODO Remove "a verse about" part for production, use it in development
     //  for debugging what topic Alexa picks up from the user
-    // Thank you, 
+    // Thank you,
     // https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/32202320#32202320
     let output = `A verse about '${topic}', from chapter ${chapterNumber}, verse ${verseNumber}: ` + test;
 
@@ -202,7 +204,7 @@ const handlers = {
     // TODO If a verse is found, construct the output and emit the respone
     // TODO If no verse found, state what topics are currently supported and prompt
     //  the user for a new request
-    
+
     this.response.cardRenderer(SKILL_NAME, output);
     this.response.speak(output);
     this.emit(':responseReady');
