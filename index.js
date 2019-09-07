@@ -9,19 +9,15 @@
 // @author Vivek Bhookya @mrvivacious
 
 // TODO ::
-// CURRENT :: Revisit the interaction model and figure out a more effective way
-//  of creating the voice user interface, as that design dictates what's
-//  written in this file
+// CURRENT ::
 
 // Verse (sloka) playback:
-// Can we play audio based on inputted chapter and verse?
 
 // Topic playback:
-// Can we query the user's topic?
 // Can we play an appropriate verse based on the user's topic?
 
 // Figure out what we can do for these cases, cuz implementing them is gonna
-//  be annoying:
+//  be annoying: RE: fuck it lol either we get both chapter-verse or nothinggggg
 // Can we prompt the user for the desired verse, given only the chapter?
 // Can we prompt the user for the desired chapter, given only the verse?
 //
@@ -29,7 +25,11 @@
 // DONE ::
 // Can we play anything back, hello world?
 // Can we play an audio file in the response, hello world + audio mpeg?
-
+// Revisit the interaction model and figure out a more effective way
+//  of creating the voice user interface, as that design dictates what's
+//  written in this file
+// Can we play audio based on inputted chapter and verse?
+// Can we query the user's topic?
 
 'use strict';
 const Alexa = require('alexa-sdk');
@@ -50,8 +50,8 @@ const APP_ID = process.env.APP_ID;
 const AUDIO_URL = 'https://raw.githubusercontent.com/mrvivacious/My_Bhagavad_Gita/master/verses_audio/';
 
 const SKILL_NAME = 'My Bhagavad Gita';
-const HELP_MESSAGE = 'todo';
-const HELP_REPROMPT = 'todo';
+const HELP_MESSAGE = 'To use this software, say something like, play chapter one, verse one, or say, play a verse about confusion.';
+const HELP_REPROMPT = 'Say both a chapter number and a verse number, or ask to play a verse about a topic.';
 const STOP_MESSAGE = 'Goodbye!';
 
 //============ HELPER FUNCTIONS ===========================================================================================================
@@ -100,12 +100,13 @@ const handlers = {
   'LaunchRequest': function() {
     // hello world
     // Thank you, https://medium.freecodecamp.org/amazon-has-made-it-easier-to-add-sounds-to-custom-alexa-skills-513b865d7528
-    // var testText = "Dhrtarastra uvaca\nDharma-ksetre kuru-ksetre samaveta yuyutsavah\nMamakah pandavas caiva kim akurvata sanjaya (1.1)\nDhrtastra said, O Sanjaya, blah blah blah~";
 
-    let testText = "What's up folks.";
+    let launchText = 'Welcome to the Bhagavad Gita. There are two actions: ' +
+    'request a verse by chapter and verse numbers, and request a verse by topic.';
+    launchText += ' ' + HELP_MESSAGE;
 
-    this.response.cardRenderer(SKILL_NAME, testText);
-    this.response.speak(testText);
+    this.response.cardRenderer(SKILL_NAME, launchText);
+    this.response.speak(testText).listen(HELP_REPROMPT);
     this.emit(':responseReady');
   },
   'VerseEnquiryIntent': function () {
@@ -121,11 +122,12 @@ const handlers = {
       //  desired chapter
       if (validateBounds(chapterNumber, verseNumber)) {
         // If true, we have a valid verse, deliver the audio URL
-        // todo
         let audioURL = constructAudioURL(chapterNumber, verseNumber);
-        var output = `<audio src='${audioURL}'/>`;
+        audioURL = `<audio src='${audioURL}'/>`;
 
-        this.response.cardRenderer(SKILL_NAME, output);
+        let output = `Chapter ${chapterNumber}, verse ${verseNumber}: ` + audioURL;
+
+        this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
         this.response.speak(output);
         this.emit(':responseReady');
       }
@@ -155,21 +157,8 @@ const handlers = {
       this.response.speak(output).listen(listen);
       this.emit(':responseReady');
     }
-
-    let test = 'Validate bounds';
-
-    // Construct the output and return the result
-
-    // testText = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
-
-    this.response.cardRenderer(SKILL_NAME, test);
-    this.response.speak(test);
-    this.emit(':responseReady');
   },
   'TopicEnquiryIntent': function() {
-    //   console.log("--- TOPIC MAP FILE ? ---");
-    //   console.log(Object.keys(topicsGitaFile['TOPICS_MAP']));
-
     // Get the user's requested topic
     let topic = this.event.request.intent.slots.topic.value.toLowerCase();
 
@@ -187,7 +176,7 @@ const handlers = {
     let chapterNumber = randomChapterVerse[0];
     let verseNumber = randomChapterVerse[1];
 
-    // For display purposes
+    // TODO For display purposes
     let verseSanskrit = BHAGAVAD_GITA[chapterNumber][verseNumber][0];
     let verseEnglish = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
 
@@ -195,7 +184,7 @@ const handlers = {
     let audioURL = constructAudioURL(chapterNumber, verseNumber);
     var test = `<audio src='${audioURL}'/>`;
 
-    console.log('$$$$$ The constructed audio url is ' + test);
+    // console.log('$$$$$ The constructed audio url is ' + test);
 
     // TODO Remove "a verse about" part for production, use it in development
     //  for debugging what topic Alexa picks up from the user
