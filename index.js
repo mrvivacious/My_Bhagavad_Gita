@@ -86,12 +86,12 @@ function constructAudioURL(chapter, verse) {
   // Build the path
   // For example,
   // 01/01_01_m_mpeg.mp3
-  // let path = `${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
-  let path = '10/With_meaning/mpeg/10_09_m_mpeg.mp3';
+  let path = `${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
+  // let path = '10/With_meaning/mpeg/10_09_m_mpeg.mp3';
 
   // Return the full URL
-  // return AUDIO_URL + path;
-  return 'chapter is ' + chapter + ' verse is ' + verse;
+  return AUDIO_URL + path;
+  // return 'chapter is ' + chapter + ' verse is ' + verse;
 }
 
 //=========================================================================================================================================
@@ -122,6 +122,12 @@ const handlers = {
       if (validateBounds(chapterNumber, verseNumber)) {
         // If true, we have a valid verse, deliver the audio URL
         // todo
+        let audioURL = constructAudioURL(chapterNumber, verseNumber);
+        var output = `<audio src='${audioURL}'/>`;
+
+        this.response.cardRenderer(SKILL_NAME, output);
+        this.response.speak(output);
+        this.emit(':responseReady');
       }
       // Else, speak that this chapter does not have this verse and
       //  the chapter instead has some number of verses
@@ -137,7 +143,6 @@ const handlers = {
           this.response.speak(output);
           this.emit(':responseReady');
       }
-
     }
     // No values were provided, "cold launch"
     // + Prompt for both chapter and verse
