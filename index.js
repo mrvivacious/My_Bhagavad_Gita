@@ -106,7 +106,7 @@ const handlers = {
     launchText += ' ' + HELP_MESSAGE;
 
     this.response.cardRenderer(SKILL_NAME, launchText);
-    this.response.speak(testText).listen(HELP_REPROMPT);
+    this.response.speak(launchText).listen(HELP_REPROMPT);
     this.emit(':responseReady');
   },
   'VerseEnquiryIntent': function () {
