@@ -29,15 +29,15 @@ o Finish any leftover TODOs for the text (ie trimming any lengthy translations)
 
 #### Post-processing
 
-o Upload all the audio to S3 and connect the storage to our Lambda backend
-
 o Test test test test test
 
 o Publish!
 
-o Google Assistant version (look into using GCloud Storage over S3 for the Assistant version)!
++ Make icons, release materials, etc
 
-o Bixby/Cortana/Siri/other voice versions etc
+o Google Assistant version
+
+o ...Bixby/Cortana/Siri/other voice versions etc
 
 
 ### Done:
@@ -46,3 +46,5 @@ o Bixby/Cortana/Siri/other voice versions etc
 √ Get copyright-free audio and text
 
 √ Declare the dictionaries (fullGita.js) for the verses with the correct verse lengths for each chapter
+
+√ Upload all the audio to GitHub and connect the storage to our Lambda backend
