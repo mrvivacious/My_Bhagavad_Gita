@@ -97,6 +97,9 @@ function constructAudioURL(chapter, verse) {
 //=========================================================================================================================================
 
 const handlers = {
+  'SessionEndedRequest': function () {
+    this.emit(':responseReady');
+  },
   'LaunchRequest': function() {
     // hello world
     // Thank you, https://medium.freecodecamp.org/amazon-has-made-it-easier-to-add-sounds-to-custom-alexa-skills-513b865d7528
@@ -199,7 +202,7 @@ const handlers = {
     // TODO If no verse found, state what topics are currently supported and prompt
     //  the user for a new request
 
-    this.response.cardRenderer(SKILL_NAME, output);
+    this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
     this.response.speak(output);
     this.emit(':responseReady');
   },
@@ -215,9 +218,11 @@ const handlers = {
     this.emit(':responseReady');
   },
   'AMAZON.StopIntent': function() {
-    this.response.speak(STOP_MESSAGE);
     this.emit(':responseReady');
   },
+  'AMAZON.FallbackIntent': function() {
+    this.emit(':responseReady');
+  }
 };
 
 exports.handler = function(event, context, callback) {
