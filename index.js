@@ -9,7 +9,9 @@
 // @author Vivek Bhookya @mrvivacious
 
 // TODO ::
-// CURRENT ::
+// o Get synonym of topic requested
+// o Add logs to view the user's request (in fact, could even update a DB table)
+// o Offer to play entire chapter at once, 10 urls at a time
 
 // Verse (sloka) playback:
 
@@ -44,6 +46,8 @@ const topicsGitaFile = require('./topicsGita');
 const BHAGAVAD_GITA = fullGitaFile.BHAGAVAD_GITA;
 const TOPICS_MAP = topicsGitaFile.TOPICS_MAP;
 
+const getTopic = topicsGitaFile.getTopic;
+
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = process.env.APP_ID;
@@ -73,6 +77,7 @@ function validateBounds(chapter, verse) {
   return false;
 }
 
+// Takes the indexes as numbers
 function constructAudioURL(chapter, verse) {
   // Prefix the chapter and verse with '0' if needed
   if (chapter < 10) {
@@ -167,7 +172,8 @@ const handlers = {
 
     // TODO If the topic has a synonym, get the more general term
     // Collect the list of verses that corresponds to this topic
-    let topicVerses = TOPICS_MAP[topic];
+    // let topicVerses = TOPICS_MAP[topic];
+    let topicVerses = getTopic(topic);
 
     // console.log("--- OUR VERSES ---");
     // console.log(topicVerses);
@@ -201,6 +207,26 @@ const handlers = {
     // TODO If a verse is found, construct the output and emit the respone
     // TODO If no verse found, state what topics are currently supported and prompt
     //  the user for a new request
+
+    this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
+    this.response.speak(output);
+    this.emit(':responseReady');
+  },
+  'RandomVerseIntent': function() {
+    // Get random chapter
+    // + 1 because the Gita is indexed 1 - 18
+    let randomChapter = Math.floor(Math.random() * 18) + 1;
+    let chapter = BHAGAVAD_GITA[randomChapter];
+    let chapterLength = Object.keys(chapter).length;
+    
+    // Get random verse from that chapter
+    let randomVerse = Math.floor(Math.random() * chapterLength) + 1;
+
+    // Return
+    let audioURL = constructAudioURL(randomChapter, randomVerse);
+    audioURL = `<audio src='${audioURL}'/>`;
+
+    let output = `Chapter ${randomChapter}, verse ${randomVerse}: ` + audioURL;
 
     this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
     this.response.speak(output);
