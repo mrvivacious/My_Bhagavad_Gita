@@ -142,16 +142,25 @@ const handlers = {
       // Else, speak that this chapter does not have this verse and
       //  the chapter instead has some number of verses
       else {
-        // Number of verses in the selected chapter
-        let versesInChapter = Object.keys(BHAGAVAD_GITA[chapterNumber]).length;
-
-        let output = 'Hmm, chapter ' + chapterNumber + ' does not have a verse ' +
-          verseNumber + '. Chapter ' + chapterNumber + ' has ' + versesInChapter +
-          ' verses.';
-
-          this.response.cardRenderer(SKILL_NAME, output);
-          this.response.speak(output);
-          this.emit(':responseReady');
+        let output;
+        
+        // Is chapter even valid?
+        if (chapterNumber < 1 || chapterNumber > 18) {
+          output = 'The Bhagavad Gita has 18 chapters, please request a chapter between ' +
+            '1 and 18, inclusive.';
+        }
+        else {
+          // Number of verses in the selected chapter
+          let versesInChapter = Object.keys(BHAGAVAD_GITA[chapterNumber]).length;
+  
+          output = 'Hmm, chapter ' + chapterNumber + ' does not have a verse ' +
+            verseNumber + '. Chapter ' + chapterNumber + ' has ' + versesInChapter +
+            ' verses.';
+        }
+        
+        this.response.cardRenderer(SKILL_NAME, output);
+        this.response.speak(output);
+        this.emit(':responseReady');
       }
     }
     // No values were provided, "cold launch"
