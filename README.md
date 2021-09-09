@@ -12,6 +12,7 @@ https://archive.org/details/6BhagavadGitaChapter06
 
 https://archive.org/details/16BhagavadGitaChapter18
 
+https://audio.iskcondesiretree.com/index.php?q=f&f=%2F06_-_More%2F10_-_Audio_Books%2FBhagavat_Gita_Recitation_Sanskrit_to_English
 
 ### Text source:
 
