@@ -62,7 +62,7 @@ let selectedVerse = document.getElementById('selectedVerse');
 let searchValue = document.getElementById('inputSearch');
 let searchResults = document.getElementById('searchResults');
 
-inputChapter.addEventListener('click', () => {
+inputChapter.addEventListener('change', () => {
   let chapterValue = inputChapter.value;
   let chapter = BHAGAVAD_GITA[chapterValue];
   let numberOfVerses = Object.keys(chapter).length;
