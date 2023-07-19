@@ -1,6 +1,8 @@
 # MyBhagavadGitaSkill
 Krsna, heard through the medium of Alexa. Non-commercial and open-source. Please don't spam the S3 urls and boost my AWS bills :(
 
+### Try it online https://mrvivacious.github.io/My_Bhagavad_Gita/
+
 
 DEC 4th 2019: [We are published for Amazon Alexa](https://www.amazon.com/dp/B0828YQ2GW/ref=sr_1_fkmr0_1) !!!!!!!!
 
