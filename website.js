@@ -96,17 +96,19 @@ inputVerse.addEventListener('change', () => {
 });
 
 searchValue.addEventListener('keyup', () => {
-  console.log(searchValue.value)
+  let searchPhrase = searchValue.value.trim();
+  if (searchPhrase.length < 1) { return; }
 
-  if (searchValue.value.trim().length < 1) { return; }
-  let verses = '';
+  searchPhrase = searchPhrase.toLowerCase();
+
+  let verses = '';  
 
   for (let i = 1; i <= 18; i++) {
     for (let j = 1; j <= Object.keys(BHAGAVAD_GITA[i]).length; j++) {
       let sanskritVerse = BHAGAVAD_GITA[i][j][0];
       let englishVerse = BHAGAVAD_GITA[i][j][1];
 
-      if (englishVerse.includes(searchValue.value)) {
+      if (englishVerse.toLowerCase().includes(searchPhrase)) {
         verses += 
           "Chapter " + i + ", Verse " + j + "\n" +
           sanskritVerse + "\n" + englishVerse + "\n\n"
