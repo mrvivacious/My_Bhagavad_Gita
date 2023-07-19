@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Bhagavad Gita
+    </title>
+    <script src="fullGita.js"></script>
+  </head>
+  <body>
+    <h1>
+      Bhagavad Gita etc
+    </h1>
+
+    <h3>
+      Browse by Chapter and Verse
+    </h3>
+
+    <p>
+      Chapter (1 - 18):
+    </p>
+    <p>
+      <input id="input_chapter" type="number" min="1" max="18" value="1">
+    </p>
+
+    <p id="verseRange">
+      Verse (1 - 46): 
+    </p>
+    <p>
+      <input id="input_verse" type="number" min="1" max="46" value="1">
+    </p>
+
+    <p>
+      <em>
+        <div id="selectedVerse">
+          Chapter 1, Verse 1:
+          <br>
+          dhrtarastra uvaca
+          <br>
+          dharma-ksetre kuru-ksetre samaveta yuyutsavah
+          <br>
+          mamakah pandavas caiva kim akurvata sanjaya (1.1)
+          <br>
+          <br>
+          Dhrtarastra said:
+          <br>
+          O Sanjaya, what did the sons of Pandu and mine do when they gathered on
+          <br>
+          the sacred plain of Kuruksetra, eager for battle?
+        </div>
+      </em>
+    </p>
+    <hr>
+
+    <h3>Random Verse: click the button below</h3>
+    <button id="button">Get random verse</button>
+
+    <br>
+    <br>
+
+    <audio id="audioPlayer" controls>
+      <source id="audiosrc" src="" type="audio/mp3">
+      blahblah
+    </audio>
+
+    <br>
+    <br>
+
+    <p id="m">random verse</p>
+
+    <hr>
+
+    <h3>
+      Search by phrase (todo)
+    </h3>
+
+    <input id="inputSearch" type="text">
+
+    <p id="searchResults">
+      results go here
+    </p>
+  </body>
+  <script src="website.js"></script>
+</html>
