@@ -8,18 +8,11 @@ function showRandomVerse() {
   // Get random verse from that chapter
   let randomVerse = Math.floor(Math.random() * chapterLength) + 1;
 
-  // Return
   let audioURL = constructAudioURL(randomChapter, randomVerse);
-  console.log(document.getElementById('audiosrc').src)
-
   let audio = document.getElementById('audioPlayer');
   let audioSource = document.getElementById('audiosrc');
   audioSource.src = audioURL;
-
   audio.load()
-
-
-  // let output = `Chapter ${randomChapter}, verse ${randomVerse}: ` + audioURL;
 
   document.getElementById('m').innerText = 
     "Chapter " + randomChapter + ", verse " + randomVerse + ":\n" +
@@ -69,8 +62,14 @@ inputChapter.addEventListener('change', () => {
 
   verseRange.innerText = `Verse (1 - ${numberOfVerses})`;
 
-  inputVerse.max = numberOfVerses;
-  inputVerse.value = 1;
+  inputVerse.innerHTML = '';
+  
+  for (let i = 1; i <= numberOfVerses; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    inputVerse.appendChild(option);
+  }
 
   selectedVerse.innerText = 
   "Chapter " + chapterValue + ", Verse " + 1 + ":\n" +
@@ -78,14 +77,22 @@ inputChapter.addEventListener('change', () => {
     "\n\n" + BHAGAVAD_GITA[chapterValue][1][1]
 })
 
-inputVerse.addEventListener('click', () => {
+inputVerse.addEventListener('change', () => {
   let chapterValue = inputChapter.value;
   let verseValue = inputVerse.value;
 
-  selectedVerse.innerText = 
-  "Chapter " + chapterValue + ", Verse " + verseValue + ":\n" +
+  let displayText = 
+  "Chapter " + chapterValue + ", Verse " + verseValue + ":<br>" +
     BHAGAVAD_GITA[chapterValue][verseValue][0] +
-    "\n\n" + BHAGAVAD_GITA[chapterValue][verseValue][1]
+    "<br><br>" + BHAGAVAD_GITA[chapterValue][verseValue][1];
+
+  selectedVerse.innerHTML = '<em>' + displayText + '</em>'
+
+  let audioURL = constructAudioURL(chapterValue, verseValue);
+  let audio = document.getElementById('browse_audioPlayer');
+  let audioSource = document.getElementById('browse_audiosrc');
+  audioSource.src = audioURL;
+  audio.load()
 });
 
 searchValue.addEventListener('keyup', () => {
@@ -107,6 +114,19 @@ searchValue.addEventListener('keyup', () => {
     }
   }
 
-  console.log(verses)
   searchResults.innerText = verses;
 })
+
+// Preload chapter one on initial page load
+window.onload = () => {
+  let chapterValue = inputChapter.value;
+  let chapter = BHAGAVAD_GITA[chapterValue];
+  let numberOfVerses = Object.keys(chapter).length;
+
+  for (let i = 1; i <= numberOfVerses; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    inputVerse.appendChild(option);
+  }
+}
