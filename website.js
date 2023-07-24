@@ -119,6 +119,33 @@ searchValue.addEventListener('keyup', () => {
   searchResults.innerText = verses;
 })
 
+let toggleBrowse = document.getElementById('browseToggle');
+let toggleSearch = document.getElementById('searchToggle');
+let toggleRandom = document.getElementById('randomToggle');
+
+let browseFeature = document.getElementById('browse');
+let searchFeature = document.getElementById('search');
+let randomFeature = document.getElementById('random');
+
+toggleBrowse.addEventListener('click', () => {
+  console.log('browse button clicked')
+  searchFeature.style.display = 'none';
+  randomFeature.style.display = 'none';
+  browseFeature.style.display = 'block'
+});
+
+toggleSearch.addEventListener('click', () => {
+  browseFeature.style.display = 'none';
+  randomFeature.style.display = 'none';
+  searchFeature.style.display = 'block'
+});
+
+toggleRandom.addEventListener('click', () => {
+  browseFeature.style.display = 'none';
+  searchFeature.style.display = 'none';
+  randomFeature.style.display = 'block';
+});
+
 // Preload chapter one on initial page load
 window.onload = () => {
   let chapterValue = inputChapter.value;

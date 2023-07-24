@@ -8,102 +8,116 @@
   </head>
   <body>
     <h1>
-      Bhagavad Gita etc
+      <center>
+        Bhagavad Gita etc
+      </center>
     </h1>
 
-    <h3>
-      Browse by Chapter and Verse
-    </h3>
+    <hr>
+    <center>
+      <button id="browseToggle">Browser</button>
+      <button id="searchToggle">Search</button>
+      <button id="randomToggle">Random verse!</button>
+    </center>
+    <hr>
 
-    <p>
-      Chapter (1 - 18):
-    </p>
-    <p>
-      <select name="chapter" id="input_chapter">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
-        <option value="16">16</option>
-        <option value="17">17</option>
-        <option value="18">18</option>
-      </select>
-    </p>
+    <center>
+    <div id="browse" style="display: block;">
+      <h3>
+        Browse by Chapter and Verse
+      </h3>
 
-    <p id="verseRange">
-      Verse (1 - 46): 
-    </p>
-    <p>
-      <select name="verse" id="input_verse">
-      </select>
+      <p>
+        Chapter (1 - 18):
+      </p>
+      <p>
+        <select name="chapter" id="input_chapter">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+        </select>
       </p>
 
-    <p>
-      <em>
-        <div id="selectedVerse">
-          Chapter 1, Verse 1:
-          <br>
-          dhrtarastra uvaca
-          <br>
-          dharma-ksetre kuru-ksetre samaveta yuyutsavah
-          <br>
-          mamakah pandavas caiva kim akurvata sanjaya (1.1)
-          <br>
-          <br>
-          Dhrtarastra said:
-          <br>
-          O Sanjaya, what did the sons of Pandu and mine do when they gathered on
-          <br>
-          the sacred plain of Kuruksetra, eager for battle?
-        </div>
-      </em>
-    </p>
+      <p id="verseRange">
+        Verse (1 - 46): 
+      </p>
+      <p>
+        <select name="verse" id="input_verse">
+        </select>
+        </p>
 
-    <audio id="browse_audioPlayer" controls>
-      <source id="browse_audiosrc" src="verses_audio/01/With_meaning/mpeg/01_01_m_mpeg.mp3" type="audio/mp3">
-      blahblah
-    </audio>
+      <p>
+        <em>
+          <div id="selectedVerse">
+            Chapter 1, Verse 1:
+            <br>
+            dhrtarastra uvaca
+            <br>
+            dharma-ksetre kuru-ksetre samaveta yuyutsavah
+            <br>
+            mamakah pandavas caiva kim akurvata sanjaya (1.1)
+            <br>
+            <br>
+            Dhrtarastra said:
+            <br>
+            O Sanjaya, what did the sons of Pandu and mine do when they gathered on
+            <br>
+            the sacred plain of Kuruksetra, eager for battle?
+          </div>
+        </em>
+      </p>
 
-    <hr>
+      <audio id="browse_audioPlayer" controls>
+        <source id="browse_audiosrc" src="verses_audio/01/With_meaning/mpeg/01_01_m_mpeg.mp3" type="audio/mp3">
+        blahblah
+      </audio>
+    </div>
 
-    <h3>Random Verse: click the button below</h3>
-    <button id="button">Get random verse</button>
+    <div id="random" style="display: none;">
+      <h3>Random Verse: click the button below</h3>
+      <button id="button">Get random verse</button>
 
-    <br>
-    <br>
+      <br>
+      <br>
 
-    <audio id="audioPlayer" controls>
-      <source id="audiosrc" src="" type="audio/mp3">
-      blahblah
-    </audio>
+      <audio id="audioPlayer" controls>
+        <source id="audiosrc" src="" type="audio/mp3">
+        blahblah
+      </audio>
 
-    <br>
-    <br>
+      <br>
+      <br>
 
-    <p id="m">random verse</p>
+      <p id="m">random verse</p>
+    </div>
 
-    <hr>
+    <div id="search" style="display: none;">
+      <h3>
+        Search by phrase (todo)
+      </h3>
 
-    <h3>
-      Search by phrase (todo)
-    </h3>
+      <input id="inputSearch" type="text">
 
-    <input id="inputSearch" type="text">
-
-    <p id="searchResults">
-      results go here
-    </p>
+      <p id="searchResults">
+        results go here
+      </p>
+    </div>
+  </center>
   </body>
   <script src="website.js"></script>
 </html>
