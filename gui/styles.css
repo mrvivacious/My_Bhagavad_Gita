@@ -1,5 +1,37 @@
-body, select, audio, button {
-  font-size: larger;
+body {
+  font-size: 150%;
+}
+
+span {
+  font-size: 120%;
+}
+
+button, select {
+  font-size: 100%;
+}
+
+#selectedVerse {
+  font-style: italic;
+  font-size: 36px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for the link */
+footer a {
+    /* text-decoration: none; */
+    color: #333;
+}
+
+a {
+    color: #333;
+}
+
+#m {
+  font-style: italic;
 }
 
 .animation {
@@ -89,7 +121,7 @@ body, select, audio, button {
 
 .fade-in-element {
   position: absolute;
-  top: 25%;
+  /* top: 5vh; */
   margin-left: 25vw;
   width: 50%;
   text-align: center;
