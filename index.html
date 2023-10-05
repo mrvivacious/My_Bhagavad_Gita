@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      Bhagavad Gita
-    </title>
-    <script src="fullGita.js"></script>
-    <link rel="stylesheet" href="gui/styles.css">
-  </head>
-  <body>
+<html lang="en">
 
-    <!-- https://codepen.io/superchief/pen/mJmoBz -->
-    <div class="animation">
-      <div class="content">
-        <h2 class="frame-1">ॐ</h2>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhagavad Gita</title>
+  <script src="fullGita.js"></script>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="gui/styles.css">
+</head>
+
+<body>
+  <div class="animation">
+    <div class="content">
+      <h2 class="frame-1">ॐ</h2>
     </div>
+  </div>
 
+  <div class="fade-in-element">
+    <center>
+      <h1>
+        The <em>Bhagavad Gita</em>,<br>The Song of God
+      </h1>
+      <a href="https://www.youtube.com/watch?v=3239cnJX2lo" target="_blank">
+        Video tutorial on YouTube
+      </a>
+    </center>
 
-    <div class="fade-in-element">
-      <center>
-        <h1>
-          The <em>Bhagavad Gita</em>,<br>The Song of God
-        </h1>
-        <a href="https://www.youtube.com/watch?v=3239cnJX2lo" target="_blank">
-          Video tutorial on YouTube
-        </a>
-      </center>
+    <hr>
+    <center>
+      <button id="searchToggle">Search</button>
+      <button id="browseToggle">Browser</button>
+      <button id="randomToggle">Random verse!</button>
+    </center>
+    <hr>
 
-      <hr>
-      <center>
-        <button id="searchToggle">Search</button>
-        <button id="browseToggle">Browser</button>
-        <button id="randomToggle">Random verse!</button>
-      </center>
-      <hr>
-
-      <center>
+    <center>
       <div id="browse" style="display: none;">
         <h3>
           Browse by Chapter and Verse
@@ -69,29 +69,29 @@
 
         <p>
           <span id="verseRange">
-            Verse (1 - 46): 
+            Verse (1 - 46):
           </span>
           <select name="verse" id="input_verse">
           </select>
         </p>
 
         <p>
-            <div id="selectedVerse">
-              Chapter 1, Verse 1:
-              <br>
-              dhrtarastra uvaca
-              <br>
-              dharma-ksetre kuru-ksetre samaveta yuyutsavah
-              <br>
-              mamakah pandavas caiva kim akurvata sanjaya (1.1)
-              <br>
-              <br>
-              Dhrtarastra said:
-              <br>
-              O Sanjaya, what did the sons of Pandu and mine do when they gathered on
-              <br>
-              the sacred plain of Kuruksetra, eager for battle?
-            </div>
+        <div id="selectedVerse">
+          Chapter 1, Verse 1:
+          <br>
+          dhrtarastra uvaca
+          <br>
+          dharma-ksetre kuru-ksetre samaveta yuyutsavah
+          <br>
+          mamakah pandavas caiva kim akurvata sanjaya (1.1)
+          <br>
+          <br>
+          Dhrtarastra said:
+          <br>
+          O Sanjaya, what did the sons of Pandu and mine do when they gathered on
+          <br>
+          the sacred plain of Kuruksetra, eager for battle?
+        </div>
         </p>
 
         <audio id="browse_audioPlayer" controls>
@@ -131,40 +131,35 @@
       </div>
     </center>
 
-
     <br><br>
     <hr>
 
-
     <footer>
       <p>Happy reading.</p>
-      <p><a href="https://github.com/mrvivacious/My_Bhagavad_Gita/blob/master/index.html" target="_blank">Source Code on GitHub</a></p>
+      <p><a href="https://github.com/mrvivacious/My_Bhagavad_Gita/blob/master/index.html" target="_blank">Source Code on
+          GitHub</a></p>
     </footer>
   </div>
 
-  </body>
-  <script src="gui/website.js"></script>
-  <script src="gui/searchFeature.js"></script>
-  <script>
-    function isMobile() {
-      var userAgent = navigator.userAgent;
-      var mobileDevices = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone"];
-      for (var i = 0; i < mobileDevices.length; i++) {
-        if (userAgent.indexOf(mobileDevices[i]) > -1) {
-          return true;
-        }
+</body>
+<script src="gui/website.js"></script>
+<script src="gui/searchFeature.js"></script>
+<script>
+  function isMobile() {
+    var userAgent = navigator.userAgent;
+    var mobileDevices = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone"];
+    for (var i = 0; i < mobileDevices.length; i++) {
+      if (userAgent.indexOf(mobileDevices[i]) > -1) {
+        return true;
       }
-      return false;
     }
+    return false;
+  }
 
-    if (isMobile()) {
-      // The user is on a mobile device
-      // console.log('is mobile')
-      let ui = document.getElementsByClassName('fade-in-element')[0];
-      ui.style.top = "15vh";
-    } else {
-      // The user is on a desktop computer
-      // alert('is not mobile')
-    }
-  </script>
+  if (isMobile()) {
+    let ui = document.getElementsByClassName('fade-in-element')[0];
+    ui.style.top = "15vh";
+  }
+</script>
+
 </html>
