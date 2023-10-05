@@ -4,7 +4,7 @@ function showRandomVerse() {
   let randomChapter = Math.floor(Math.random() * 18) + 1;
   let chapter = BHAGAVAD_GITA[randomChapter];
   let chapterLength = Object.keys(chapter).length;
-  
+
   // Get random verse from that chapter
   let randomVerse = Math.floor(Math.random() * chapterLength) + 1;
 
@@ -14,7 +14,7 @@ function showRandomVerse() {
   audioSource.src = audioURL;
   audio.load()
 
-  document.getElementById('m').innerText = 
+  document.getElementById('m').innerText =
     "Chapter " + randomChapter + ", verse " + randomVerse + ":\n" +
     BHAGAVAD_GITA[randomChapter][randomVerse][0] +
     "\n\n" + BHAGAVAD_GITA[randomChapter][randomVerse][1]
@@ -61,7 +61,7 @@ inputChapter.addEventListener('change', () => {
   verseRange.innerText = `Verse (1 - ${numberOfVerses})`;
 
   inputVerse.innerHTML = '';
-  
+
   for (let i = 1; i <= numberOfVerses; i++) {
     let option = document.createElement("option");
     option.value = i;
@@ -69,8 +69,8 @@ inputChapter.addEventListener('change', () => {
     inputVerse.appendChild(option);
   }
 
-  selectedVerse.innerText = 
-  "Chapter " + chapterValue + ", Verse " + 1 + ":\n" +
+  selectedVerse.innerText =
+    "Chapter " + chapterValue + ", Verse " + 1 + ":\n" +
     BHAGAVAD_GITA[chapterValue][1][0] +
     "\n\n" + BHAGAVAD_GITA[chapterValue][1][1]
 })
@@ -79,8 +79,8 @@ inputVerse.addEventListener('change', () => {
   let chapterValue = inputChapter.value;
   let verseValue = inputVerse.value;
 
-  let displayText = 
-  "Chapter " + chapterValue + ", Verse " + verseValue + ":<br>" +
+  let displayText =
+    "Chapter " + chapterValue + ", Verse " + verseValue + ":<br>" +
     BHAGAVAD_GITA[chapterValue][verseValue][0] +
     "<br><br>" + BHAGAVAD_GITA[chapterValue][verseValue][1];
 

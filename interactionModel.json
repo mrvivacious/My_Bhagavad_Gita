@@ -1,126 +1,111 @@
 {
-    "interactionModel": {
-        "languageModel": {
-            "invocationName": "my bhagavad gita",
-            "intents": [
-                {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": [
-                        "exit"
-                    ]
-                },
-                {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": [
-                        "cancel request",
-                        "cancel"
-                    ]
-                },
-                {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": [
-                        "please help me",
-                        "please help",
-                        "how do i use this",
-                        "what do i do",
-                        "help me",
-                        "help"
-                    ]
-                },
-                {
-                    "name": "AMAZON.StopIntent",
-                    "samples": [
-                        "initiate end sequence",
-                        "end",
-                        "logout",
-                        "quit",
-                        "stop"
-                    ]
-                },
-                {
-                    "name": "TopicEnquiryIntent",
-                    "slots": [
-                        {
-                            "name": "topic",
-                            "type": "topic"
-                        }
-                    ],
-                    "samples": [
-                        "about {topic}",
-                        "is there anything about {topic}",
-                        "tell me about {topic}",
-                        "what is said about {topic}",
-                        "to tell me something about {topic}",
-                        "for a verse about {topic}",
-                        "for something on {topic}",
-                        "for a verse on {topic}",
-                        "for something about {topic}",
-                        "tell me something about {topic}"
-                    ]
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
-                },
-                {
-                    "name": "VerseEnquiryIntent",
-                    "slots": [
-                        {
-                            "name": "verse",
-                            "type": "AMAZON.NUMBER"
-                        },
-                        {
-                            "name": "chapter",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": [
-                        "ask my bhagavad gita for chapter {chapter} verse {verse}",
-                        "ask my bhagavad gita to play verse {verse} from chapter {chapter}",
-                        "ask my bhagavad gita to play chapter {chapter} verse {verse}",
-                        "play chapter {chapter} verse {verse}",
-                        "play verse {verse} from chapter {chapter}"
-                    ]
-                },
-                {
-                    "name": "RandomVerseIntent",
-                    "slots": [],
-                    "samples": [
-                        "open my bhagavad gita to any random verse",
-                        "ask my bhagavad gita to tell me a random verse",
-                        "tell me a random verse",
-                        "ask my bhagavad gita for a random verse"
-                    ]
-                }
-            ],
-            "types": [
-                {
-                    "name": "topic",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "loneliness",
-                                "synonyms": [
-                                    "being lonely"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "sadness"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "happiness",
-                                "synonyms": [
-                                    "being happy"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my bhagavad gita",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": ["exit"]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": ["cancel request", "cancel"]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "please help me",
+            "please help",
+            "how do i use this",
+            "what do i do",
+            "help me",
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": ["initiate end sequence", "end", "logout", "quit", "stop"]
+        },
+        {
+          "name": "TopicEnquiryIntent",
+          "slots": [
+            {
+              "name": "topic",
+              "type": "topic"
+            }
+          ],
+          "samples": [
+            "about {topic}",
+            "is there anything about {topic}",
+            "tell me about {topic}",
+            "what is said about {topic}",
+            "to tell me something about {topic}",
+            "for a verse about {topic}",
+            "for something on {topic}",
+            "for a verse on {topic}",
+            "for something about {topic}",
+            "tell me something about {topic}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "VerseEnquiryIntent",
+          "slots": [
+            {
+              "name": "verse",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "chapter",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "ask my bhagavad gita for chapter {chapter} verse {verse}",
+            "ask my bhagavad gita to play verse {verse} from chapter {chapter}",
+            "ask my bhagavad gita to play chapter {chapter} verse {verse}",
+            "play chapter {chapter} verse {verse}",
+            "play verse {verse} from chapter {chapter}"
+          ]
+        },
+        {
+          "name": "RandomVerseIntent",
+          "slots": [],
+          "samples": [
+            "open my bhagavad gita to any random verse",
+            "ask my bhagavad gita to tell me a random verse",
+            "tell me a random verse",
+            "ask my bhagavad gita for a random verse"
+          ]
         }
+      ],
+      "types": [
+        {
+          "name": "topic",
+          "values": [
+            {
+              "name": {
+                "value": "loneliness",
+                "synonyms": ["being lonely"]
+              }
+            },
+            {
+              "name": {
+                "value": "sadness"
+              }
+            },
+            {
+              "name": {
+                "value": "happiness",
+                "synonyms": ["being happy"]
+              }
+            }
+          ]
+        }
+      ]
     }
+  }
 }
