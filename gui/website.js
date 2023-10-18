@@ -21,7 +21,6 @@ function showRandomVerse() {
 }
 
 function constructAudioURL(chapter, verse) {
-  // Prefix the chapter and verse with '0' if needed
   if (chapter < 10) {
     chapter = '0' + chapter;
   }
@@ -32,15 +31,12 @@ function constructAudioURL(chapter, verse) {
 
   // Build the path
   // For example,
-  // 01/01_01_m_mpeg.mp3
+  // 10/With_meaning/mpeg/10_09_m_mpeg.mp3
   let path = `verses_audio/${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
-  // let path = '10/With_meaning/mpeg/10_09_m_mpeg.mp3';
 
   console.log(path)
 
-  // Return the full URL
   return path;
-  // return 'chapter is ' + chapter + ' verse is ' + verse;
 }
 
 document.getElementById('button').addEventListener('click', showRandomVerse);
@@ -93,7 +89,12 @@ inputVerse.addEventListener('change', () => {
   audio.load()
 });
 
-
+function pauseAudioIfPlaying(id) {
+  let audio = document.getElementById(id);
+  if (audio && (!audio.paused || audio.currentTime)) {
+    audio.pause();
+  }
+}
 
 let toggleBrowse = document.getElementById('browseToggle');
 let toggleSearch = document.getElementById('searchToggle');
@@ -104,19 +105,25 @@ let searchFeature = document.getElementById('search');
 let randomFeature = document.getElementById('random');
 
 toggleBrowse.addEventListener('click', () => {
-  console.log('browse button clicked')
+  pauseAudioIfPlaying('audioPlayer');
+
   searchFeature.style.display = 'none';
   randomFeature.style.display = 'none';
-  browseFeature.style.display = 'block'
+  browseFeature.style.display = 'block';
 });
 
 toggleSearch.addEventListener('click', () => {
+  pauseAudioIfPlaying('audioPlayer');
+  pauseAudioIfPlaying('browse_audioPlayer');
+
   browseFeature.style.display = 'none';
   randomFeature.style.display = 'none';
-  searchFeature.style.display = 'block'
+  searchFeature.style.display = 'block';
 });
 
 toggleRandom.addEventListener('click', () => {
+  pauseAudioIfPlaying('browse_audioPlayer');
+
   browseFeature.style.display = 'none';
   searchFeature.style.display = 'none';
   randomFeature.style.display = 'block';
