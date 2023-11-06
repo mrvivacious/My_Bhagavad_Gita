@@ -36,6 +36,7 @@
 'use strict';
 const Alexa = require('alexa-sdk');
 
+
 // Thank you,
 // https://stackoverflow.com/questions/3922994/share-variables-between-files-in-node-js
 // Get the file we want to import our exports from
@@ -131,8 +132,10 @@ const handlers = {
         audioURL = `<audio src='${audioURL}'/>`;
 
         let output = `Chapter ${chapterNumber}, verse ${verseNumber}: ` + audioURL;
-
-        this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
+        let displayOutput = BHAGAVAD_GITA[chapterNumber][verseNumber][0] + '\n' +
+          BHAGAVAD_GITA[chapterNumber][verseNumber][1];
+        
+        this.response.cardRenderer(SKILL_NAME, displayOutput);
         this.response.speak(output);
         this.emit(':responseReady');
       }
@@ -151,7 +154,7 @@ const handlers = {
           let versesInChapter = Object.keys(BHAGAVAD_GITA[chapterNumber]).length;
   
           output = 'Hmm, chapter ' + chapterNumber + ' does not have a verse ' +
-            verseNumber + '. Chapter ' + chapterNumber + ' has ' + versesInChapter +
+            verseNumber + '.\n\nChapter ' + chapterNumber + ' has ' + versesInChapter +
             ' verses.';
         }
         
@@ -183,15 +186,12 @@ const handlers = {
     
     if (!topicVerses) {
       let output = `We haven't found a verse about '${topic}'. The developer will take a closer look for relevant verses and release them in a future update.`; 
-      output += ' Meanwhile, you can see supported topics in this skill\'s description page in the app store page.';
-
-    this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
-    this.response.speak(output);
-    this.emit(':responseReady');
+      output += '\nMeanwhile, you can see supported topics in this skill\'s description page in the app store page.';
+  
+      this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
+      this.response.speak(output);
+      this.emit(':responseReady');
     }
-
-    // console.log("--- OUR VERSES ---");
-    // console.log(topicVerses);
 
     // Randomly select a chapter-verse item from the list
     let randomIdx = Math.floor(Math.random() * topicVerses.length);
@@ -200,11 +200,9 @@ const handlers = {
     let chapterNumber = randomChapterVerse[0];
     let verseNumber = randomChapterVerse[1];
 
-    // TODO For display purposes
     let verseSanskrit = BHAGAVAD_GITA[chapterNumber][verseNumber][0];
     let verseEnglish = BHAGAVAD_GITA[chapterNumber][verseNumber][1];
 
-    // TODO Construct the output and emit the response
     let audioURL = constructAudioURL(chapterNumber, verseNumber);
     var test = `<audio src='${audioURL}'/>`;
 
@@ -215,7 +213,9 @@ const handlers = {
     // Thank you,
     // https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/32202320#32202320
     let output = `A verse about '${topic}', from chapter ${chapterNumber}, verse ${verseNumber}: ` + test;
-
+    let displayOutput = `A verse about '${topic}', from chapter ${chapterNumber}, verse ${verseNumber}:\n` + 
+        verseSanskrit + '\n' + verseEnglish;
+              
     // TODO Else if topic does not exist,
     // TODO Log the request + topic to Cloudwatch so we can see what the request was
     // TODO Do a search through the Gita to see what verses have this requested term
@@ -223,7 +223,7 @@ const handlers = {
     // TODO If no verse found, state what topics are currently supported and prompt
     //  the user for a new request
 
-    this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
+    this.response.cardRenderer(SKILL_NAME, displayOutput);
     this.response.speak(output);
     this.emit(':responseReady');
   },
@@ -242,8 +242,11 @@ const handlers = {
     audioURL = `<audio src='${audioURL}'/>`;
 
     let output = `Chapter ${randomChapter}, verse ${randomVerse}: ` + audioURL;
-
-    this.response.cardRenderer(SKILL_NAME, output.split(':')[0]);
+    let displayOutput = `Chapter ${randomChapter}, verse ${randomVerse}:\n` +
+      BHAGAVAD_GITA[randomChapter][randomVerse][0] + '\n' + 
+      BHAGAVAD_GITA[randomChapter][randomVerse][1];
+      
+    this.response.cardRenderer(SKILL_NAME, displayOutput);
     this.response.speak(output);
     this.emit(':responseReady');
   },
