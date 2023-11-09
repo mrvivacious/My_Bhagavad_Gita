@@ -49,11 +49,14 @@ function searchBhagavadGita(phrase) {
           highlightedEnglishVerse = highlightedEnglishVerse.replace('\n', '<br>')
         }
 
+        let audioURL = constructAudioURL(chapter,verse);
+
         results.push({
           chapter,
           verse,
           sanskritVerse,
           highlightedEnglishVerse,
+          audioURL
         });
       }
     }
@@ -71,7 +74,26 @@ function displayNoResultsMessage(phrase) {
 
 function displaySearchResults(results) {
   const resultText = results.map(verse =>
-    `Chapter ${verse.chapter}, Verse ${verse.verse}<br>${verse.sanskritVerse}<br>${verse.highlightedEnglishVerse}<br><br>`
+    `Chapter ${verse.chapter}, Verse ${verse.verse}` +
+    `<br>${verse.sanskritVerse}<br>${verse.highlightedEnglishVerse}` +
+    `<br><audio id="browse_audioPlayer" controls>
+      <source id="browse_audiosrc" src="${verse.audioURL}" type="audio/mp3"></audio>` +
+    `<br><br>`
   ).join('');
   searchResults.innerHTML = resultText;
+}
+
+function constructAudioURL(chapter, verse) {
+  if (chapter < 10) {
+    chapter = '0' + chapter;
+  }
+
+  if (verse < 10) {
+    verse = '0' + verse;
+  }
+
+  let path = `verses_audio/${chapter}/With_meaning/mpeg/${chapter}_${verse}_m_mpeg.mp3`;
+  console.log(path)
+
+  return path;
 }
