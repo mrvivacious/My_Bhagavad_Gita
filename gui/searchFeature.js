@@ -17,6 +17,20 @@ function handleSearch() {
   }
 }
 
+function highlightVerse(verse, phrase) {
+  // Create a regular expression to match the phrase (case-insensitive)
+  const regex = new RegExp(phrase, 'gi');
+
+  // Use the replace method to wrap the matching phrase with a span element
+  const highlightedVerse = verse.replace(
+      regex,
+      (match) => `<span style="background-color: yellow">${match}</span>`
+  );
+
+  return highlightedVerse;
+}
+
+
 function searchBhagavadGita(phrase) {
   const results = [];
   for (let chapter = 1; chapter <= 18; chapter++) {
@@ -25,11 +39,12 @@ function searchBhagavadGita(phrase) {
       const englishVerse = BHAGAVAD_GITA[chapter][verse][1].toLowerCase();
 
       if (englishVerse.includes(phrase)) {
+        let highlightedEnglishVerse = highlightVerse(englishVerse, phrase);
         results.push({
           chapter,
           verse,
           sanskritVerse,
-          englishVerse,
+          highlightedEnglishVerse,
         });
       }
     }
@@ -47,7 +62,7 @@ function displayNoResultsMessage(phrase) {
 
 function displaySearchResults(results) {
   const resultText = results.map(verse =>
-    `Chapter ${verse.chapter}, Verse ${verse.verse}\n${verse.sanskritVerse}\n${verse.englishVerse}\n\n`
+    `Chapter ${verse.chapter}, Verse ${verse.verse}\n${verse.sanskritVerse}\n${verse.highlightedEnglishVerse}<br><br>`
   ).join('');
-  searchResults.innerText = resultText;
+  searchResults.innerHTML = resultText;
 }
