@@ -35,11 +35,20 @@ function searchBhagavadGita(phrase) {
   const results = [];
   for (let chapter = 1; chapter <= 18; chapter++) {
     for (let verse = 1; verse <= Object.keys(BHAGAVAD_GITA[chapter]).length; verse++) {
-      const sanskritVerse = BHAGAVAD_GITA[chapter][verse][0];
+      let sanskritVerse = BHAGAVAD_GITA[chapter][verse][0];
       const englishVerse = BHAGAVAD_GITA[chapter][verse][1].toLowerCase();
 
       if (englishVerse.includes(phrase)) {
         let highlightedEnglishVerse = highlightVerse(englishVerse, phrase);
+
+        while (sanskritVerse.includes('\n')) { 
+          sanskritVerse = sanskritVerse.replace('\n', '<br>')
+        }
+
+        while (highlightedEnglishVerse.includes('\n')) { 
+          highlightedEnglishVerse = highlightedEnglishVerse.replace('\n', '<br>')
+        }
+
         results.push({
           chapter,
           verse,
@@ -62,7 +71,7 @@ function displayNoResultsMessage(phrase) {
 
 function displaySearchResults(results) {
   const resultText = results.map(verse =>
-    `Chapter ${verse.chapter}, Verse ${verse.verse}\n${verse.sanskritVerse}\n${verse.highlightedEnglishVerse}<br><br>`
+    `Chapter ${verse.chapter}, Verse ${verse.verse}<br>${verse.sanskritVerse}<br>${verse.highlightedEnglishVerse}<br><br>`
   ).join('');
   searchResults.innerHTML = resultText;
 }
