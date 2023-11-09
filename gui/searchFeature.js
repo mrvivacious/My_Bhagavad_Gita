@@ -9,6 +9,10 @@ function handleSearch() {
     return;
   }
 
+  if (searchPhrase.length < 3) {
+    return;
+  }
+
   const foundResults = searchBhagavadGita(searchPhrase);
   if (foundResults.length === 0) {
     displayNoResultsMessage(searchPhrase);
