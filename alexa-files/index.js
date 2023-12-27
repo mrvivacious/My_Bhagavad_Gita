@@ -40,7 +40,7 @@ const Alexa = require('alexa-sdk');
 // Thank you,
 // https://stackoverflow.com/questions/3922994/share-variables-between-files-in-node-js
 // Get the file we want to import our exports from
-const fullGitaFile = require('./fullGita');
+const fullGitaFile = require('../fullGita');
 const topicsGitaFile = require('./topicsGita');
 
 // Collect the TOPICS_MAP
