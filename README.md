@@ -1,6 +1,8 @@
 # Bhagavad Gita Search Engine
 [Try online](https://mrvivacious.github.io/My_Bhagavad_Gita/). A Bhagavad Gita browser skill is also available for the [Amazon Alexa](https://www.amazon.com/dp/B0828YQ2GW/ref=sr_1_fkmr0_1) (Dec 4, 2019).
 
+Note: maybe check out this site (unaffiliated with me/us) for your Bhagavad Gita related needs: https://bhagavadgita.io/
+
 ## Repository structure
 
 - `alexa-files`: code for the Amazon Alexa resource
